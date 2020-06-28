@@ -13,7 +13,7 @@ namespace EFDataAccess.Configurations
         {
             builder.Property(x => x.CommentText)
                 .IsRequired()
-                .HasMaxLength(100);
+                .HasMaxLength(1000);
         }
     }
 }

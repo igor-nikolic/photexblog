@@ -9,6 +9,7 @@ namespace Application.DTO
         public int Id { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
+        public string PhotoPath { get; set; }
         public int TopicId { get; set; }
         public int UserId { get; set; }
     }

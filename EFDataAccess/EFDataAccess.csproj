@@ -9,6 +9,18 @@
     <Compile Remove="Migrations\20200620125237_fixed relations.Designer.cs" />
     <Compile Remove="Migrations\20200620125603_fixed db.cs" />
     <Compile Remove="Migrations\20200620125603_fixed db.Designer.cs" />
+    <Compile Remove="Migrations\20200628115833_added seedings.cs" />
+    <Compile Remove="Migrations\20200628115833_added seedings.Designer.cs" />
+    <Compile Remove="Migrations\20200628120140_added seedings-topic.cs" />
+    <Compile Remove="Migrations\20200628120140_added seedings-topic.Designer.cs" />
+    <Compile Remove="Migrations\20200628120244_added seedings-users.cs" />
+    <Compile Remove="Migrations\20200628120244_added seedings-users.Designer.cs" />
+    <Compile Remove="Migrations\20200628121506_added seedings-posts.cs" />
+    <Compile Remove="Migrations\20200628121506_added seedings-posts.Designer.cs" />
+    <Compile Remove="Migrations\20200628141352_db seeding, added comments.cs" />
+    <Compile Remove="Migrations\20200628141352_db seeding, added comments.Designer.cs" />
+    <Compile Remove="Migrations\20200628141646_db seeding, added comments.cs" />
+    <Compile Remove="Migrations\20200628141646_db seeding, added comments.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

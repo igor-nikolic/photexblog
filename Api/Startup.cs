@@ -5,14 +5,17 @@ using System.Text;
 using System.Threading.Tasks;
 using Api.Core;
 using Application.Commands;
+using Application.Commands.Post;
 using Application.Commands.Topic;
 using Application.Queries.Topic;
 using Application.UseCase;
 using EFDataAccess;
+using Implementation.Commands.PostCommands;
 using Implementation.Commands.TopicCommands;
 using Implementation.Commands.UserCommands;
 using Implementation.Loggers;
 using Implementation.Queries.Topic;
+using Implementation.Validators.PostValidators;
 using Implementation.Validators.TopicValidators;
 using Implementation.Validators.UserValidators;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -56,6 +59,8 @@ namespace Api
             services.AddTransient<CreateTopicValidator>();
             services.AddTransient<UpdateTopicValidator>();
             services.AddTransient<CreateUserValidator>();
+            services.AddTransient<ICreatePostCommand, EfCreatePostCommand>();
+            services.AddTransient<CreatePostValidator>();
             services.AddHttpContextAccessor();
             services.AddTransient<IApplicationActor>(x =>
             {
@@ -116,7 +121,7 @@ namespace Api
             }
 
             app.UseRouting();
-
+            app.UseStaticFiles();
             app.UseMiddleware<GlobalExceptionHandler>();
             app.UseAuthentication();
             app.UseAuthorization();
