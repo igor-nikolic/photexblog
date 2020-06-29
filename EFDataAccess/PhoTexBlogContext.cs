@@ -435,6 +435,12 @@ namespace EFDataAccess
                 new UseCase { Id=13,Name="Soft Delete Comment"},
                 new UseCase { Id=14,Name="Update Comment"},
                 new UseCase { Id=15,Name="Search UseCaseLog"},
+                new UseCase { Id=16,Name="Search Topics"},
+                new UseCase { Id=17,Name="Search Posts"},
+                new UseCase { Id=18,Name="Get One Topic"},
+                new UseCase { Id=19,Name="Get One Post"},
+                new UseCase { Id=20,Name="Search Comments"},
+                new UseCase { Id=21,Name="Get One Comment"},
 
             };
             modelBuilder.Entity<UseCase>().HasData(useCases);

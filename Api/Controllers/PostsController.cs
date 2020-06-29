@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Application.Commands.Post;
 using Application.DTO;
+using Application.Queries.Post;
+using Application.SearchDto;
 using Application.UseCase;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -31,17 +33,17 @@ namespace Api.Controllers
         [AllowAnonymous]
         // GET: api/<PostsController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get([FromQuery] PostSearch search,[FromServices] IGetPostsQuery query)
         {
-            return new string[] { "value1", "value2" };
+            return Ok(_executor.ExecuteQuery(query,search));
         }
 
         [AllowAnonymous]
         // GET api/<PostsController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IActionResult Get(int id,[FromServices] IGetOnePostQuery query)
         {
-            return "value";
+            return Ok(_executor.ExecuteQuery(query, id));
         }
 
         // POST api/<PostsController>

@@ -12,12 +12,10 @@ namespace Implementation.Queries.UseCaseLog
     public class EfGetUseCaseLogsQuery : IGetUseCaseLogsQuery
     {
         private readonly PhoTexBlogContext _context;
-        private readonly IMapper _mapper;
 
-        public EfGetUseCaseLogsQuery(PhoTexBlogContext context, IMapper mapper)
+        public EfGetUseCaseLogsQuery(PhoTexBlogContext context)
         {
             _context = context;
-            _mapper = mapper;
         }
 
         public int Id => 15;
@@ -36,13 +34,13 @@ namespace Implementation.Queries.UseCaseLog
             if (!string.IsNullOrEmpty(search.UserEmail) || !string.IsNullOrWhiteSpace(search.UserEmail))
             {
                 query = query.Where(x => x.User.Email.ToLower().Contains(search.UserEmail.ToLower()));
-            }
-            var skipCount = search.PerPage * (search.Page - 1);
+            }            
 
             if (search.StartDate != null) query = query.Where(x => x.Date >= search.StartDate);
             if (search.EndDate != null) query = query.Where(x => x.Date <= search.EndDate);
-            
-            
+
+            var skipCount = search.PerPage * (search.Page - 1);
+
 
             var response = new PagedResponse<UseCaseLogDto>
             {

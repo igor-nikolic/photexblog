@@ -1,9 +1,9 @@
 ﻿using Application.DTO;
+using Application.Exceptions;
 using Application.Queries.Topic;
 using EFDataAccess;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using Microsoft.EntityFrameworkCore;
+using System.Linq;
 
 namespace Implementation.Queries.Topic
 {
@@ -16,18 +16,22 @@ namespace Implementation.Queries.Topic
             _context = context;
         }
 
-        public int Id => 121212;
+        public int Id => 18;
 
         public string Name => "Get One Topic";
 
         public ReadTopicDto Execute(int search)
         {
-            var topic = _context.Topics.Find(search);
+            var topic = _context.Topics
+                .Include(x => x.Posts)
+                .SingleOrDefault(x => x.Id == search);
 
+            if(topic == null) throw new EntityNotFoundException(search, typeof(Domain.Topic));
             return new ReadTopicDto
             {
                 Id = topic.Id,
-                Name = topic.Name
+                Name = topic.Name,
+                NumberOfPosts = topic.Posts.Count()
             };
         }
     }

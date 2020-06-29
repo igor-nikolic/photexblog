@@ -12,10 +12,11 @@ using Application.Commands.Topic;
 using Application.Commands.User;
 using Application.DTO;
 using Application.Email;
+using Application.Queries.Comment;
+using Application.Queries.Post;
 using Application.Queries.Topic;
 using Application.Queries.UseCaseLog;
 using Application.UseCase;
-using AutoMapper;
 using EFDataAccess;
 using Implementation.Commands.CommentCommands;
 using Implementation.Commands.PostCommands;
@@ -24,6 +25,8 @@ using Implementation.Commands.TopicCommands;
 using Implementation.Commands.UserCommands;
 using Implementation.Email;
 using Implementation.Loggers;
+using Implementation.Queries.Comment;
+using Implementation.Queries.Post;
 using Implementation.Queries.Topic;
 using Implementation.Queries.UseCaseLog;
 using Implementation.Validators.CommentValidators;
@@ -65,19 +68,30 @@ namespace Api
             //services.AddTransient<IUseCaseLogger, ConsoleLogger>();
             services.AddTransient<IUseCaseLogger, DBLogger>();
 
-            services.AddTransient<ICreateTopicCommand, EFCreateTopicCommand>();
+            services.AddTransient<IGetTopicsQuery, EfGetTopicsQuery>();
             services.AddTransient<IGetOneTopicQuery, EfGetOneTopicQuery>();
+            services.AddTransient<ICreateTopicCommand, EFCreateTopicCommand>();
             services.AddTransient<IUpdateTopicCommand, EfUpdateTopicCommand>();
-            services.AddTransient<IDeleteTopicCommand, EfSoftDeleteTopicCommand>();
+            services.AddTransient<IDeleteTopicCommand, EfSoftDeleteTopicCommand>();        
+            
+            
+            
+            
 
             services.AddTransient<ICreateUserCommand, EfCreateUserCommand>();
-            services.AddTransient<IDeleteUserCommand, EfSoftDeleteUserCommand>();
             services.AddTransient<IUpdateUserCommand, EfUpdateUserCommand>();
+            services.AddTransient<IDeleteUserCommand, EfSoftDeleteUserCommand>();
+            
 
+            services.AddTransient<IGetPostsQuery, EfGetPostsQuery>();
+            services.AddTransient<IGetOnePostQuery, EfGetOnePostQuery>();
             services.AddTransient<ICreatePostCommand, EfCreatePostCommand>();
             services.AddTransient<IUpdatePostCommand, EfUpdatePostCommand>();
             services.AddTransient<IDeletePostCommand, EfSoftDeletePostCommand>();
 
+
+            services.AddTransient<IGetCommentsQuery, EfGetCommentsQuery>();
+            services.AddTransient<IGetOneCommentQuery, EfGetOneCommentQuery>();
             services.AddTransient<ICreateCommentCommand, EfCreateCommentCommand>();
             services.AddTransient<IDeleteCommentCommand, EfSoftDeleteCommentCommand>();
             services.AddTransient<IUpdateCommentCommand, EfUpdateCommentCommand>();

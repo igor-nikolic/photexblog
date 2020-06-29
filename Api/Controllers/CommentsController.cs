@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using Application.Commands.Comments;
 using Application.DTO;
+using Application.Queries.Comment;
+using Application.SearchDto;
 using Application.UseCase;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -22,18 +24,20 @@ namespace Api.Controllers
             _executor = executor;
         }
 
+        [AllowAnonymous]
         // GET: api/<CommentsController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get([FromQuery] CommentSearch search,[FromServices] IGetCommentsQuery query)
         {
-            return new string[] { "value1", "value2" };
+            return Ok(_executor.ExecuteQuery(query, search));
         }
 
+        [AllowAnonymous]
         // GET api/<CommentsController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IActionResult Get(int id,[FromServices] IGetOneCommentQuery query)
         {
-            return "value";
+            return Ok(_executor.ExecuteQuery(query,id));
         }
 
         // POST api/<CommentsController>

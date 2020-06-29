@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Application.Commands.Topic;
 using Application.DTO;
 using Application.Queries.Topic;
+using Application.SearchDto;
 using Application.UseCase;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -27,9 +28,9 @@ namespace Api.Controllers
 
         // GET: api/<TopicsController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get([FromQuery] TopicSearch search,[FromServices] IGetTopicsQuery query)
         {
-            return new string[] { "value1", "value2" };
+            return Ok(_executor.ExecuteQuery(query, search));
         }
 
         // GET api/<TopicsController>/5
