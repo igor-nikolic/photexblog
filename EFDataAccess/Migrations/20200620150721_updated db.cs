@@ -118,13 +118,13 @@ namespace EFDataAccess.Migrations
                 principalColumn: "Id",
                 onDelete: ReferentialAction.Cascade);
 
-            migrationBuilder.AddForeignKey(
-                name: "FK_UseCaseLogs_Users_UserId",
-                table: "UseCaseLogs",
-                column: "UserId",
-                principalTable: "Users",
-                principalColumn: "Id",
-                onDelete: ReferentialAction.Restrict);
+            //migrationBuilder.AddForeignKey(
+            //    name: "FK_UseCaseLogs_Users_UserId",
+            //    table: "UseCaseLogs",
+            //    column: "UserId",
+            //    principalTable: "Users",
+            //    principalColumn: "Id",
+            //    onDelete: ReferentialAction.Restrict);
 
             migrationBuilder.AddForeignKey(
                 name: "FK_UserUseCases_UseCases_UseCaseId",
@@ -141,9 +141,9 @@ namespace EFDataAccess.Migrations
                 name: "FK_UseCaseLogs_UseCases_UseCaseId",
                 table: "UseCaseLogs");
 
-            migrationBuilder.DropForeignKey(
-                name: "FK_UseCaseLogs_Users_UserId",
-                table: "UseCaseLogs");
+            //migrationBuilder.DropForeignKey(
+            //    name: "FK_UseCaseLogs_Users_UserId",
+            //    table: "UseCaseLogs");
 
             migrationBuilder.DropForeignKey(
                 name: "FK_UserUseCases_UseCases_UseCaseId",

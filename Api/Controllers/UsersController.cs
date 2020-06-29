@@ -4,8 +4,10 @@ using System.Linq;
 using System.Threading.Tasks;
 using Api.Core;
 using Application.Commands;
+using Application.Commands.User;
 using Application.DTO;
 using Application.UseCase;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,6 +15,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UsersController : ControllerBase
@@ -40,6 +43,7 @@ namespace Api.Controllers
             return "value";
         }
 
+        [AllowAnonymous]
         // POST api/<UsersController>
         [HttpPost]
         public IActionResult Post([FromBody] UserDto dto,[FromServices] ICreateUserCommand command)
@@ -50,16 +54,22 @@ namespace Api.Controllers
 
         // PUT api/<UsersController>/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public IActionResult Put(int id, [FromBody] UserDto dto,[FromServices] IUpdateUserCommand command)
         {
+            dto.Id = id;
+            _executor.ExecuteCommand(command, dto);
+            return NoContent();
         }
 
         // DELETE api/<UsersController>/5
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public IActionResult Delete(int id,[FromServices] IDeleteUserCommand command)
         {
+            _executor.ExecuteCommand(command, id);
+            return NoContent();
         }
 
+        [AllowAnonymous]
         [HttpPost("gettoken")]
         public IActionResult GetToken([FromBody] TokenDto dto) 
         {

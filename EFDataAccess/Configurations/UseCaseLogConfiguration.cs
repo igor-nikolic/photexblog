@@ -13,6 +13,7 @@ namespace EFDataAccess.Configurations
         {
             builder.Property(x => x.Data).IsRequired();
             builder.Property(x => x.Date).IsRequired();
+            
         }
     }
 }

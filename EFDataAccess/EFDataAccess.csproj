@@ -21,6 +21,26 @@
     <Compile Remove="Migrations\20200628141352_db seeding, added comments.Designer.cs" />
     <Compile Remove="Migrations\20200628141646_db seeding, added comments.cs" />
     <Compile Remove="Migrations\20200628141646_db seeding, added comments.Designer.cs" />
+    <Compile Remove="Migrations\20200629120309_updated rule for ratings.cs" />
+    <Compile Remove="Migrations\20200629120309_updated rule for ratings.Designer.cs" />
+    <Compile Remove="Migrations\20200629143655_added usecases.cs" />
+    <Compile Remove="Migrations\20200629143655_added usecases.Designer.cs" />
+    <Compile Remove="Migrations\20200629144314_added use-case.cs" />
+    <Compile Remove="Migrations\20200629144314_added use-case.Designer.cs" />
+    <Compile Remove="Migrations\20200629145412_added usecase.cs" />
+    <Compile Remove="Migrations\20200629145412_added usecase.Designer.cs" />
+    <Compile Remove="Migrations\20200629150311_added usecase.cs" />
+    <Compile Remove="Migrations\20200629150311_added usecase.Designer.cs" />
+    <Compile Remove="Migrations\20200629150826_added usecases.cs" />
+    <Compile Remove="Migrations\20200629150826_added usecases.Designer.cs" />
+    <Compile Remove="Migrations\20200629151339_addedusecase.cs" />
+    <Compile Remove="Migrations\20200629151339_addedusecase.Designer.cs" />
+    <Compile Remove="Migrations\20200629151819_addedusecase2.cs" />
+    <Compile Remove="Migrations\20200629151819_addedusecase2.Designer.cs" />
+    <Compile Remove="Migrations\20200629152613_addedusecase2.cs" />
+    <Compile Remove="Migrations\20200629152613_addedusecase2.Designer.cs" />
+    <Compile Remove="Migrations\20200629154253_addedusecases.cs" />
+    <Compile Remove="Migrations\20200629154253_addedusecases.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

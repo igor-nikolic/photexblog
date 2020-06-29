@@ -21,7 +21,7 @@ namespace Implementation.Commands.TopicCommands
             _validator = validator;
         }
 
-        public int Id => 1221;
+        public int Id => 6;
 
         public string Name => "Update Topic";
 

@@ -38,11 +38,6 @@ namespace EFDataAccess.Configurations
                 .HasForeignKey(uc => uc.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-            builder.HasMany(u => u.UseCaseLogs)
-                .WithOne(ucl => ucl.User)
-                .HasForeignKey(ucl => ucl.UserId)
-                .OnDelete(DeleteBehavior.Restrict);
-
 
 
         }

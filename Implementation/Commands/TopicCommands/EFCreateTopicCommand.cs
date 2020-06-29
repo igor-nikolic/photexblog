@@ -18,7 +18,7 @@ namespace Implementation.Commands.TopicCommands
             _validator = validator;
         }
 
-        public int Id => 12;
+        public int Id => 4;
 
         public string Name => "Create Topic";
 

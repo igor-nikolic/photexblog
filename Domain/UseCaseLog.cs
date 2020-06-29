@@ -11,7 +11,7 @@ namespace Domain
         public int UseCaseId { get; set; }
         public virtual UseCase UseCase { get; set; }
         public string Data { get; set; }
-        public int UserId { get; set; }
-        public User User { get; set; }
+        public int? UserId { get; set; }
+        public virtual User User { get; set; }
     }
 }

@@ -20,7 +20,7 @@ namespace Implementation.Validators.TopicValidators
 
             RuleFor(x => x.Name)
                 .NotEmpty()
-                .WithMessage("Name must not be empty!");
+                .WithMessage("Name is required!");
 
             
             RuleFor(x => x.Id)

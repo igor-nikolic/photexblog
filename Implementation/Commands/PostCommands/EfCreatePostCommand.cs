@@ -22,7 +22,7 @@ namespace Implementation.Commands.PostCommands
             _validator = validator;
         }
 
-        public int Id => throw new NotImplementedException();
+        public int Id => 7;
 
         public string Name => "Create Post";
 

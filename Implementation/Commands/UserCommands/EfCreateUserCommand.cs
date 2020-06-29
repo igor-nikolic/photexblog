@@ -1,5 +1,6 @@
 ﻿using Application.Commands;
 using Application.DTO;
+using Application.Email;
 using Domain;
 using EFDataAccess;
 using FluentValidation;
@@ -13,11 +14,13 @@ namespace Implementation.Commands.UserCommands
     {
         private readonly PhoTexBlogContext _context;
         private readonly CreateUserValidator _validator;
+        private readonly IEmailSender _sender;
 
-        public EfCreateUserCommand(PhoTexBlogContext context, CreateUserValidator validator)
+        public EfCreateUserCommand(PhoTexBlogContext context, CreateUserValidator validator, IEmailSender sender)
         {
             _context = context;
             _validator = validator;
+            _sender = sender;
         }
 
         public int Id => 1;
@@ -57,6 +60,12 @@ namespace Implementation.Commands.UserCommands
             };
             _context.Users.Add(user);
             _context.SaveChanges();
+            _sender.Send(new SendEmailDto
+            {
+                Content = "You have been registered!",
+                SendTo = request.Email,
+                Subject= "Registration Confirmation"
+            });
         }
     }
 }

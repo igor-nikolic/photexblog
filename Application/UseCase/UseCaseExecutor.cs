@@ -7,17 +7,18 @@ namespace Application.UseCase
 {
     public class UseCaseExecutor
     {
-        //private readonly IApplicationActor actor;
+        private readonly IApplicationActor actor;
         private readonly IUseCaseLogger logger;
 
-        public UseCaseExecutor(IUseCaseLogger logger)
+        public UseCaseExecutor(IApplicationActor actor,IUseCaseLogger logger)
         {
             this.logger = logger;
+            this.actor = actor;
         }
 
         public TResult ExecuteQuery<TSearch, TResult>(IQuery<TSearch, TResult> query, TSearch search)
         {
-            logger.Log(query, search);
+            logger.Log(query,actor, search);
 
             //if (!actor.AllowedUseCases.Contains(query.Id))
             //{
@@ -31,7 +32,7 @@ namespace Application.UseCase
             ICommand<TRequest> command,
             TRequest request)
         {
-            logger.Log(command, request);
+            logger.Log(command, actor, request);
             // 1 (1,2,3,4)
             //if (!actor.AllowedUseCases.Contains(command.Id))
             //{

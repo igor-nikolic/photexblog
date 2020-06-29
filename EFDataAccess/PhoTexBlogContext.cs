@@ -3,6 +3,7 @@ using EFDataAccess.Configurations;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace EFDataAccess
@@ -113,15 +114,6 @@ namespace EFDataAccess
             }
             };
             modelBuilder.Entity<User>().HasData(fakeUsers);
-            //var fakePost = new List<Post> {
-            //new Post{
-            //        Id=1,
-            //        Title = "Post 1",
-            //        Content = "post1post1post1post1post1post1post1post1post1post1post1post1post1post1",
-            //        PhotoPath = "images/1.png",
-            //        UserId = 1,
-            //        TopicId = 1
-            //} };
             var fakePosts = new List<Post>
             {
                 new Post
@@ -404,12 +396,11 @@ namespace EFDataAccess
                 });
             }
             modelBuilder.Entity<Comment>().HasData(fakeComments);
-            var fakeRatings = new List<Rating>();
-            for (int i = 1; i < 250; i++) 
+            var fakeRatingsSeeding = new List<Rating>();
+            for (int i = 1; i < 100; i++) 
             {
-                fakeRatings.Add(new Rating
+                fakeRatingsSeeding.Add(new Rating
                 {
-                    Id=i,
                     PostId = rand.Next(1, 24),
                     UserId = rand.Next(1,8),
                     Value = rand.Next(1,10),
@@ -417,21 +408,53 @@ namespace EFDataAccess
                     CreatedAt = DateTime.Now
                 });
             }
-            modelBuilder.Entity<Rating>().HasData(fakeRatings);
+            
+            List<Rating> fakeRatings = fakeRatingsSeeding.GroupBy(x => new { x.PostId, x.UserId })
+                .Select(r => r.First())
+                .ToList();
+            for (int i = 0; i < fakeRatings.Count(); i++)
+            {
+                fakeRatings[i].Id = i + 1;
+            }
 
+            modelBuilder.Entity<Rating>().HasData(fakeRatings);
+            var useCases = new List<UseCase> 
+            { 
+                new UseCase { Id=1,Name="Create User"},
+                new UseCase { Id=2,Name="Soft Delete User"},
+                new UseCase { Id=3,Name="Update User"},
+                new UseCase { Id=4,Name="Create Topic"},
+                new UseCase { Id=5,Name="Soft Delete Topic"},
+                new UseCase { Id=6,Name="Update Topic"},
+                new UseCase { Id=7,Name="Create Post"},
+                new UseCase { Id=8,Name="Soft Delete Post"},
+                new UseCase { Id=9,Name="Update Post"},
+                new UseCase { Id=10,Name="Create Rating"},
+                new UseCase { Id=11,Name="Update Rating"},
+                new UseCase { Id=12,Name="Create Comment"},
+                new UseCase { Id=13,Name="Soft Delete Comment"},
+                new UseCase { Id=14,Name="Update Comment"},
+                new UseCase { Id=15,Name="Search UseCaseLog"},
+
+            };
+            modelBuilder.Entity<UseCase>().HasData(useCases);
             modelBuilder.ApplyConfiguration(new TopicConfiguration());
             modelBuilder.ApplyConfiguration(new CommentConfiguration());
             modelBuilder.ApplyConfiguration(new PostConfiguration());
             modelBuilder.ApplyConfiguration(new RatingConfiguration());            
             modelBuilder.ApplyConfiguration(new UserConfiguration());
+            modelBuilder.ApplyConfiguration(new UseCaseConfiguration());
+            modelBuilder.ApplyConfiguration(new UseCaseLogConfiguration());
+            
+
             modelBuilder.Entity<UserUseCase>().HasKey(x => new {x.UseCaseId,x.UserId });
+            modelBuilder.Entity<Rating>().HasIndex(r => new { r.UserId, r.PostId }).IsUnique();
 
             modelBuilder.Entity<Topic>().HasQueryFilter(t => t.Visible);
             modelBuilder.Entity<Post>().HasQueryFilter(t => t.Visible);
             modelBuilder.Entity<Rating>().HasQueryFilter(t => t.Visible);
             modelBuilder.Entity<User>().HasQueryFilter(t => t.Visible);
             modelBuilder.Entity<Comment>().HasQueryFilter(t => t.Visible);
-            //modelBuilder.
         }
         public override int SaveChanges()
         {

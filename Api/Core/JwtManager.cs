@@ -44,7 +44,7 @@ namespace Api.Core
                 Identity = user.Email
             };
 
-            var claims = new List<Claim> // Jti : "", 
+            var claims = new List<Claim> 
             {
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString(), ClaimValueTypes.String, _issuer),
                 new Claim(JwtRegisteredClaimNames.Iss, "asp_api", ClaimValueTypes.String, _issuer),
@@ -63,7 +63,7 @@ namespace Api.Core
                 audience: "Any",
                 claims: claims,
                 notBefore: now,
-                expires: now.AddSeconds(60*5),
+                expires: now.AddSeconds(60*30),
                 signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);

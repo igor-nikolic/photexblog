@@ -8,9 +8,10 @@ namespace Implementation.Loggers
 {
     public class ConsoleLogger : IUseCaseLogger
     {
-        public void Log(IUseCase useCase, object useCaseData)
+
+        public void Log(IUseCase useCase, IApplicationActor actor, object useCaseData)
         {
-            Console.WriteLine($"{DateTime.Now} - {useCase.Name} - {JsonConvert.SerializeObject(useCaseData)}");
+            Console.WriteLine($"{DateTime.Now} - Actor:{actor.Identity} - {useCase.Name} - {JsonConvert.SerializeObject(useCaseData)}");            
         }
     }
 }

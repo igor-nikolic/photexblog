@@ -5,17 +5,30 @@ using System.Text;
 using System.Threading.Tasks;
 using Api.Core;
 using Application.Commands;
+using Application.Commands.Comments;
 using Application.Commands.Post;
+using Application.Commands.Rating;
 using Application.Commands.Topic;
+using Application.Commands.User;
+using Application.DTO;
+using Application.Email;
 using Application.Queries.Topic;
+using Application.Queries.UseCaseLog;
 using Application.UseCase;
+using AutoMapper;
 using EFDataAccess;
+using Implementation.Commands.CommentCommands;
 using Implementation.Commands.PostCommands;
+using Implementation.Commands.RatingCommands;
 using Implementation.Commands.TopicCommands;
 using Implementation.Commands.UserCommands;
+using Implementation.Email;
 using Implementation.Loggers;
 using Implementation.Queries.Topic;
+using Implementation.Queries.UseCaseLog;
+using Implementation.Validators.CommentValidators;
 using Implementation.Validators.PostValidators;
+using Implementation.Validators.RatingValidators;
 using Implementation.Validators.TopicValidators;
 using Implementation.Validators.UserValidators;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -49,19 +62,50 @@ namespace Api
 
             services.AddTransient<PhoTexBlogContext>();
             services.AddTransient<UseCaseExecutor>();
-            services.AddTransient<IUseCaseLogger, ConsoleLogger>();
+            //services.AddTransient<IUseCaseLogger, ConsoleLogger>();
+            services.AddTransient<IUseCaseLogger, DBLogger>();
 
             services.AddTransient<ICreateTopicCommand, EFCreateTopicCommand>();
             services.AddTransient<IGetOneTopicQuery, EfGetOneTopicQuery>();
             services.AddTransient<IUpdateTopicCommand, EfUpdateTopicCommand>();
             services.AddTransient<IDeleteTopicCommand, EfSoftDeleteTopicCommand>();
+
             services.AddTransient<ICreateUserCommand, EfCreateUserCommand>();
+            services.AddTransient<IDeleteUserCommand, EfSoftDeleteUserCommand>();
+            services.AddTransient<IUpdateUserCommand, EfUpdateUserCommand>();
+
+            services.AddTransient<ICreatePostCommand, EfCreatePostCommand>();
+            services.AddTransient<IUpdatePostCommand, EfUpdatePostCommand>();
+            services.AddTransient<IDeletePostCommand, EfSoftDeletePostCommand>();
+
+            services.AddTransient<ICreateCommentCommand, EfCreateCommentCommand>();
+            services.AddTransient<IDeleteCommentCommand, EfSoftDeleteCommentCommand>();
+            services.AddTransient<IUpdateCommentCommand, EfUpdateCommentCommand>();
+
+            services.AddTransient<ICreateRatingCommand, EfCreateRatingCommand>();
+            services.AddTransient<IUpdateRatingCommand, EfUpdateRatingCommand>();
+
+            services.AddTransient<IGetUseCaseLogsQuery, EfGetUseCaseLogsQuery>();
+
             services.AddTransient<CreateTopicValidator>();
             services.AddTransient<UpdateTopicValidator>();
+
             services.AddTransient<CreateUserValidator>();
-            services.AddTransient<ICreatePostCommand, EfCreatePostCommand>();
+            services.AddTransient<UpdateUserValidator>();          
+              
             services.AddTransient<CreatePostValidator>();
+            services.AddTransient<UpdatePostValidator>();
+
+            services.AddTransient<CreateCommentValidator>();
+            services.AddTransient<UpdateCommentValidator>();
+
+            services.AddTransient<CreateRatingValidator>();
+            services.AddTransient<UpdateRatingValidator>();
+
+            services.AddTransient<PostDto>();
+
             services.AddHttpContextAccessor();
+            services.AddTransient<IEmailSender, SMTPEmailSender>(x => new SMTPEmailSender(appSettings.MailFrom, appSettings.MailPassword));
             services.AddTransient<IApplicationActor>(x =>
             {
                 var accessor = x.GetService<IHttpContextAccessor>();

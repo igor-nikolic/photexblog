@@ -18,9 +18,9 @@ namespace Implementation.Commands.TopicCommands
             _context = context;
         }
 
-        public int Id => 1212;
+        public int Id => 5;
 
-        public string Name => "Delete Topic";
+        public string Name => "Soft Delete Topic";
 
         public void Execute(int request)
         {

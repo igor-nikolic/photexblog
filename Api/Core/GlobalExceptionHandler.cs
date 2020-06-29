@@ -38,6 +38,13 @@ namespace Api.Core
                             message = "You are not allowed to execute this operation."
                         };
                         break;
+                    case ForbiddenUseCaseException _:
+                        statusCode = StatusCodes.Status403Forbidden;
+                        response = new
+                        {
+                            message = "You are not allowed to execute this operation."
+                        };
+                        break;
                     case EntityNotFoundException _:
                         statusCode = StatusCodes.Status404NotFound;
                         response = new 

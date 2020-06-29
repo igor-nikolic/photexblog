@@ -5,6 +5,7 @@ using Microsoft.EntityFrameworkCore.Internal;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace Implementation.Validators.TopicValidators
@@ -17,12 +18,14 @@ namespace Implementation.Validators.TopicValidators
             _context = context;
             RuleFor(x => x.Name)
                 .NotEmpty()
-                .Must(name => BeUnique(name))
-                .WithMessage("Topic with that name already exists in database!");            
+                .WithMessage("Name is required!")
+                .Must(name => NotExists(name))
+                .WithMessage("Topic with that name already exists!");
+            
         }
-        private bool BeUnique(string name) 
+        private bool NotExists(string name)
         {
-            return !_context.Topics.Any(t => t.Name == name);
+            return !_context.Topics.Any(x => x.Name == name);
         }
     }
 }
