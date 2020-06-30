@@ -9,6 +9,7 @@ using Application.Commands.Comments;
 using Application.Commands.Post;
 using Application.Commands.Rating;
 using Application.Commands.Topic;
+using Application.Commands.UseCase;
 using Application.Commands.User;
 using Application.DTO;
 using Application.Email;
@@ -16,6 +17,7 @@ using Application.Queries.Comment;
 using Application.Queries.Post;
 using Application.Queries.Rating;
 using Application.Queries.Topic;
+using Application.Queries.UseCase;
 using Application.Queries.UseCaseLog;
 using Application.Queries.User;
 using Application.UseCase;
@@ -24,6 +26,7 @@ using Implementation.Commands.CommentCommands;
 using Implementation.Commands.PostCommands;
 using Implementation.Commands.RatingCommands;
 using Implementation.Commands.TopicCommands;
+using Implementation.Commands.UseCaseCommands;
 using Implementation.Commands.UserCommands;
 using Implementation.Email;
 using Implementation.Loggers;
@@ -31,12 +34,14 @@ using Implementation.Queries.Comment;
 using Implementation.Queries.Post;
 using Implementation.Queries.Rating;
 using Implementation.Queries.Topic;
+using Implementation.Queries.UseCase;
 using Implementation.Queries.UseCaseLog;
 using Implementation.Queries.User;
 using Implementation.Validators.CommentValidators;
 using Implementation.Validators.PostValidators;
 using Implementation.Validators.RatingValidators;
 using Implementation.Validators.TopicValidators;
+using Implementation.Validators.UseCaseValidators;
 using Implementation.Validators.UserValidators;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -78,22 +83,17 @@ namespace Api
             services.AddTransient<IUpdateTopicCommand, EfUpdateTopicCommand>();
             services.AddTransient<IDeleteTopicCommand, EfSoftDeleteTopicCommand>();
 
-
-
-
             services.AddTransient<IGetUsersQuery, EfGetUsersQuery>();
             services.AddTransient<IGetOneUserQuery, EfGetOneUserQuery>();
             services.AddTransient<ICreateUserCommand, EfCreateUserCommand>();
             services.AddTransient<IUpdateUserCommand, EfUpdateUserCommand>();
-            services.AddTransient<IDeleteUserCommand, EfSoftDeleteUserCommand>();
-            
+            services.AddTransient<IDeleteUserCommand, EfSoftDeleteUserCommand>();            
 
             services.AddTransient<IGetPostsQuery, EfGetPostsQuery>();
             services.AddTransient<IGetOnePostQuery, EfGetOnePostQuery>();
             services.AddTransient<ICreatePostCommand, EfCreatePostCommand>();
             services.AddTransient<IUpdatePostCommand, EfUpdatePostCommand>();
             services.AddTransient<IDeletePostCommand, EfSoftDeletePostCommand>();
-
 
             services.AddTransient<IGetCommentsQuery, EfGetCommentsQuery>();
             services.AddTransient<IGetOneCommentQuery, EfGetOneCommentQuery>();
@@ -105,6 +105,11 @@ namespace Api
             services.AddTransient<IGetOneRatingQuery, EfGetOneRatingQuery>();
             services.AddTransient<ICreateRatingCommand, EfCreateRatingCommand>();
             services.AddTransient<IUpdateRatingCommand, EfUpdateRatingCommand>();
+
+            services.AddTransient<IGetUseCasesQuery, EfGetUseCasesQuery>();
+            services.AddTransient<IGetOneUseCaseQuery, EfGetOneUseCaseQuery>();
+            services.AddTransient<ICreateUseCaseCommand, EfCreateUseCaseCommand>();
+            services.AddTransient<IUpdateUseCaseCommand, EfUpdateUseCaseCommand>();
 
             services.AddTransient<IGetUseCaseLogsQuery, EfGetUseCaseLogsQuery>();
 
@@ -121,7 +126,10 @@ namespace Api
             services.AddTransient<UpdateCommentValidator>();
 
             services.AddTransient<CreateRatingValidator>();
-            services.AddTransient<UpdateRatingValidator>();
+            services.AddTransient<UpdateRatingValidator>();            
+            
+            services.AddTransient<CreateUseCaseValidator>();
+            services.AddTransient<UpdateUseCaseValidator>();
 
             services.AddTransient<PostDto>();
 

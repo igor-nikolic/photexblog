@@ -445,6 +445,11 @@ namespace EFDataAccess
                 new UseCase { Id=23,Name="Get One User"},
                 new UseCase { Id=24,Name="Search Ratings"},
                 new UseCase { Id=25,Name="Get One Rating"},
+                new UseCase { Id=26,Name="Create UseCase"},
+                new UseCase { Id=27,Name="Update UseCase"},
+                new UseCase { Id=28,Name="Search UseCases"},
+                new UseCase { Id=29,Name="Get One UseCase"},
+
 
 
             };
