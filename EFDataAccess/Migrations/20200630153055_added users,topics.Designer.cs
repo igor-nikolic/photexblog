@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFDataAccess.Migrations
 {
     [DbContext(typeof(PhoTexBlogContext))]
-    [Migration("20200628140712_db seeding, added topics,users")]
-    partial class dbseedingaddedtopicsusers
+    [Migration("20200630153055_added users,topics")]
+    partial class addeduserstopics
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,8 +30,8 @@ namespace EFDataAccess.Migrations
 
                     b.Property<string>("CommentText")
                         .IsRequired()
-                        .HasColumnType("nvarchar(100)")
-                        .HasMaxLength(100);
+                        .HasColumnType("nvarchar(1000)")
+                        .HasMaxLength(1000);
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -140,7 +140,8 @@ namespace EFDataAccess.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId", "PostId")
+                        .IsUnique();
 
                     b.ToTable("Ratings");
                 });
@@ -180,58 +181,58 @@ namespace EFDataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 30, 54, 104, DateTimeKind.Local).AddTicks(9361),
                             Name = "Topic 1",
-                            Visible = false
+                            Visible = true
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 30, 54, 112, DateTimeKind.Local).AddTicks(4850),
                             Name = "Topic 2",
-                            Visible = false
+                            Visible = true
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 30, 54, 112, DateTimeKind.Local).AddTicks(4982),
                             Name = "Topic 3",
-                            Visible = false
+                            Visible = true
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 30, 54, 112, DateTimeKind.Local).AddTicks(5046),
                             Name = "Topic 4",
-                            Visible = false
+                            Visible = true
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 30, 54, 112, DateTimeKind.Local).AddTicks(5056),
                             Name = "Topic 5",
-                            Visible = false
+                            Visible = true
                         },
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 30, 54, 112, DateTimeKind.Local).AddTicks(5075),
                             Name = "Topic 6",
-                            Visible = false
+                            Visible = true
                         },
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 30, 54, 112, DateTimeKind.Local).AddTicks(5085),
                             Name = "Topic 7",
-                            Visible = false
+                            Visible = true
                         },
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 30, 54, 112, DateTimeKind.Local).AddTicks(5094),
                             Name = "Topic 8",
-                            Visible = false
+                            Visible = true
                         });
                 });
 
@@ -242,10 +243,14 @@ namespace EFDataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Name")
-                        .HasColumnType("int");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
 
                     b.ToTable("UseCases");
                 });
@@ -258,6 +263,7 @@ namespace EFDataAccess.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Data")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Date")
@@ -266,7 +272,7 @@ namespace EFDataAccess.Migrations
                     b.Property<int>("UseCaseId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
+                    b.Property<int?>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -326,82 +332,22 @@ namespace EFDataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "pera@gmail.com",
-                            FirstName = "Pera",
-                            LastName = "Peric",
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 30, 54, 117, DateTimeKind.Local).AddTicks(3534),
+                            Email = "admin@gmail.com",
+                            FirstName = "Admin",
+                            LastName = "Admin",
                             Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
-                            Visible = false
+                            Visible = true
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "marko@gmail.com",
-                            FirstName = "Marko",
-                            LastName = "Markovic",
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 30, 54, 117, DateTimeKind.Local).AddTicks(3925),
+                            Email = "User@gmail.com",
+                            FirstName = "User",
+                            LastName = "User",
                             Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
-                            Visible = false
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "petar@gmail.com",
-                            FirstName = "Petar",
-                            LastName = "Petrovic",
-                            Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
-                            Visible = false
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "ivan@gmail.com",
-                            FirstName = "Ivan",
-                            LastName = "Ivanovic",
-                            Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
-                            Visible = false
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "nikola@gmail.com",
-                            FirstName = "Nikola",
-                            LastName = "Nikolic",
-                            Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
-                            Visible = false
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "marija@gmail.com",
-                            FirstName = "Marija",
-                            LastName = "Marjanovic",
-                            Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
-                            Visible = false
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "milinko@gmail.com",
-                            FirstName = "Milinko",
-                            LastName = "Milinkovic",
-                            Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
-                            Visible = false
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CreatedAt = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "zdravko@gmail.com",
-                            FirstName = "Zdravko",
-                            LastName = "Zdravkovic",
-                            Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
-                            Visible = false
+                            Visible = true
                         });
                 });
 
@@ -412,6 +358,21 @@ namespace EFDataAccess.Migrations
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Visible")
+                        .HasColumnType("bit");
 
                     b.HasKey("UseCaseId", "UserId");
 
@@ -470,14 +431,12 @@ namespace EFDataAccess.Migrations
                     b.HasOne("Domain.UseCase", "UseCase")
                         .WithMany("UseCaseLogs")
                         .HasForeignKey("UseCaseId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Domain.User", "User")
                         .WithMany("UseCaseLogs")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Domain.UserUseCase", b =>
@@ -485,7 +444,7 @@ namespace EFDataAccess.Migrations
                     b.HasOne("Domain.UseCase", "UseCase")
                         .WithMany("UserUseCases")
                         .HasForeignKey("UseCaseId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Domain.User", "User")

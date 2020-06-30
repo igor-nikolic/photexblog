@@ -17,10 +17,18 @@
     <Compile Remove="Migrations\20200628120244_added seedings-users.Designer.cs" />
     <Compile Remove="Migrations\20200628121506_added seedings-posts.cs" />
     <Compile Remove="Migrations\20200628121506_added seedings-posts.Designer.cs" />
+    <Compile Remove="Migrations\20200628140712_db seeding, added topics,users.cs" />
+    <Compile Remove="Migrations\20200628140712_db seeding, added topics,users.Designer.cs" />
+    <Compile Remove="Migrations\20200628141226_db seeding, added posts.cs" />
+    <Compile Remove="Migrations\20200628141226_db seeding, added posts.Designer.cs" />
     <Compile Remove="Migrations\20200628141352_db seeding, added comments.cs" />
     <Compile Remove="Migrations\20200628141352_db seeding, added comments.Designer.cs" />
     <Compile Remove="Migrations\20200628141646_db seeding, added comments.cs" />
     <Compile Remove="Migrations\20200628141646_db seeding, added comments.Designer.cs" />
+    <Compile Remove="Migrations\20200628142002_db seeding, added comments.cs" />
+    <Compile Remove="Migrations\20200628142002_db seeding, added comments.Designer.cs" />
+    <Compile Remove="Migrations\20200628142130_db seeding, added ratings.cs" />
+    <Compile Remove="Migrations\20200628142130_db seeding, added ratings.Designer.cs" />
     <Compile Remove="Migrations\20200629120309_updated rule for ratings.cs" />
     <Compile Remove="Migrations\20200629120309_updated rule for ratings.Designer.cs" />
     <Compile Remove="Migrations\20200629143655_added usecases.cs" />
@@ -41,6 +49,26 @@
     <Compile Remove="Migrations\20200629152613_addedusecase2.Designer.cs" />
     <Compile Remove="Migrations\20200629154253_addedusecases.cs" />
     <Compile Remove="Migrations\20200629154253_addedusecases.Designer.cs" />
+    <Compile Remove="Migrations\20200629154535_addes use case.cs" />
+    <Compile Remove="Migrations\20200629154535_addes use case.Designer.cs" />
+    <Compile Remove="Migrations\20200630114301_added initial usecases.cs" />
+    <Compile Remove="Migrations\20200630114301_added initial usecases.Designer.cs" />
+    <Compile Remove="Migrations\20200630115549_added initial usecases.cs" />
+    <Compile Remove="Migrations\20200630115549_added initial usecases.Designer.cs" />
+    <Compile Remove="Migrations\20200630115805_initial usecase.cs" />
+    <Compile Remove="Migrations\20200630115805_initial usecase.Designer.cs" />
+    <Compile Remove="Migrations\20200630121802_added userusecases.cs" />
+    <Compile Remove="Migrations\20200630121802_added userusecases.Designer.cs" />
+    <Compile Remove="Migrations\20200630122101_added initial usecases and userusecases.cs" />
+    <Compile Remove="Migrations\20200630122101_added initial usecases and userusecases.Designer.cs" />
+    <Compile Remove="Migrations\20200630122418_ratings,usecases,userusecases.cs" />
+    <Compile Remove="Migrations\20200630122418_ratings,usecases,userusecases.Designer.cs" />
+    <Compile Remove="Migrations\20200630122604_ratings.cs" />
+    <Compile Remove="Migrations\20200630122604_ratings.Designer.cs" />
+    <Compile Remove="Migrations\20200630122737_useCases.cs" />
+    <Compile Remove="Migrations\20200630122737_useCases.Designer.cs" />
+    <Compile Remove="Migrations\20200630123045_useCases.cs" />
+    <Compile Remove="Migrations\20200630123045_useCases.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

@@ -15,7 +15,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
 {
-    //[Authorize]
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class UsecasesController : ControllerBase
@@ -56,12 +56,6 @@ namespace Api.Controllers
             dto.Id = id;
             _executor.ExecuteCommand(command, dto);
             return NoContent();
-        }
-
-        // DELETE api/<UsecaseController>/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
-        {
         }
     }
 }

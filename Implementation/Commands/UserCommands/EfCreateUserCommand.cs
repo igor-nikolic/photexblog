@@ -58,6 +58,7 @@ namespace Implementation.Commands.UserCommands
                 Email = request.Email,
                 Password = hashed
             };
+            //user.UserUseCases = 
             _context.Users.Add(user);
             _context.SaveChanges();
             _sender.Send(new SendEmailDto

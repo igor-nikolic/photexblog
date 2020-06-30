@@ -11,6 +11,7 @@ using Application.Commands.Rating;
 using Application.Commands.Topic;
 using Application.Commands.UseCase;
 using Application.Commands.User;
+using Application.Commands.UserUseCase;
 using Application.DTO;
 using Application.Email;
 using Application.Queries.Comment;
@@ -20,6 +21,7 @@ using Application.Queries.Topic;
 using Application.Queries.UseCase;
 using Application.Queries.UseCaseLog;
 using Application.Queries.User;
+using Application.Queries.UserUseCase;
 using Application.UseCase;
 using EFDataAccess;
 using Implementation.Commands.CommentCommands;
@@ -28,6 +30,7 @@ using Implementation.Commands.RatingCommands;
 using Implementation.Commands.TopicCommands;
 using Implementation.Commands.UseCaseCommands;
 using Implementation.Commands.UserCommands;
+using Implementation.Commands.UserUseCase;
 using Implementation.Email;
 using Implementation.Loggers;
 using Implementation.Queries.Comment;
@@ -37,11 +40,13 @@ using Implementation.Queries.Topic;
 using Implementation.Queries.UseCase;
 using Implementation.Queries.UseCaseLog;
 using Implementation.Queries.User;
+using Implementation.Queries.UserUseCase;
 using Implementation.Validators.CommentValidators;
 using Implementation.Validators.PostValidators;
 using Implementation.Validators.RatingValidators;
 using Implementation.Validators.TopicValidators;
 using Implementation.Validators.UseCaseValidators;
+using Implementation.Validators.UserUseCaseValidator;
 using Implementation.Validators.UserValidators;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
@@ -113,6 +118,9 @@ namespace Api
 
             services.AddTransient<IGetUseCaseLogsQuery, EfGetUseCaseLogsQuery>();
 
+            services.AddTransient<ICreateUserUseCaseCommand, EfCreateUserUseCaseCommand>();
+            services.AddTransient<IGetUsersUseCasesQuery, EfGetUsersUseCasesQuery>();
+
             services.AddTransient<CreateTopicValidator>();
             services.AddTransient<UpdateTopicValidator>();
 
@@ -130,6 +138,8 @@ namespace Api
             
             services.AddTransient<CreateUseCaseValidator>();
             services.AddTransient<UpdateUseCaseValidator>();
+
+            services.AddTransient<CreateUserUseCaseValidator>();
 
             services.AddTransient<PostDto>();
 

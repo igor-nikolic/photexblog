@@ -12,6 +12,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class LogsController : ControllerBase
@@ -30,12 +31,6 @@ namespace Api.Controllers
             return Ok(_executor.ExecuteQuery(query, search));
         }
 
-        // GET api/<LogController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
 
     }
 }

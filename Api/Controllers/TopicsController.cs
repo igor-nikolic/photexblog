@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Api.Controllers
 {
+    [Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class TopicsController : ControllerBase
@@ -26,6 +27,7 @@ namespace Api.Controllers
             _executor = executor;
         }
 
+        [AllowAnonymous]
         // GET: api/<TopicsController>
         [HttpGet]
         public IActionResult Get([FromQuery] TopicSearch search,[FromServices] IGetTopicsQuery query)
@@ -33,6 +35,7 @@ namespace Api.Controllers
             return Ok(_executor.ExecuteQuery(query, search));
         }
 
+        [AllowAnonymous]
         // GET api/<TopicsController>/5
         [HttpGet("{id}")]
         public IActionResult Get(int id,[FromServices] IGetOneTopicQuery query)

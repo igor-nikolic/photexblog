@@ -1,6 +1,7 @@
 ﻿using Application.Exceptions;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Application.UseCase
@@ -20,10 +21,10 @@ namespace Application.UseCase
         {
             logger.Log(query,actor, search);
 
-            //if (!actor.AllowedUseCases.Contains(query.Id))
-            //{
-            //    throw new UnauthorizedUseCaseException(query, actor);
-            //}
+            if (!actor.AllowedUseCases.Contains(query.Id))
+            {
+                throw new UnauthorizedUseCaseException(query, actor);
+            }
 
             return query.Execute(search);
         }
@@ -33,11 +34,10 @@ namespace Application.UseCase
             TRequest request)
         {
             logger.Log(command, actor, request);
-            // 1 (1,2,3,4)
-            //if (!actor.AllowedUseCases.Contains(command.Id))
-            //{
-            //    throw new UnauthorizedUseCaseException(command, actor);
-            //}
+            if (!actor.AllowedUseCases.Contains(command.Id))
+            {
+                throw new UnauthorizedUseCaseException(command, actor);
+            }
 
             command.Execute(request);
 

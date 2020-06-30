@@ -3,6 +3,7 @@ using EFDataAccess.Configurations;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -39,81 +40,29 @@ namespace EFDataAccess
                 }) ;
             }
             modelBuilder.Entity<Topic>().HasData(fakeTopics);
+
             var fakeUsers = new List<User> {
             new User{ 
                 Id=1,
-                FirstName = "Pera",
-                LastName = "Peric",
-                Email = "pera@gmail.com",
+                FirstName = "Admin",
+                LastName = "Admin",
+                Email = "admin@gmail.com",
                 Password="7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=", // Primer_123,
                 Visible = true,
                 CreatedAt = DateTime.Now
             },
             new User{
                 Id=2,
-                FirstName = "Marko",
-                LastName = "Markovic",
-                Email = "marko@gmail.com",
-                Password="7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=", // Primer_123
-                Visible = true,
-                CreatedAt = DateTime.Now
-            },
-            new User{
-                Id=3,
-                FirstName = "Petar",
-                LastName = "Petrovic",
-                Email = "petar@gmail.com",
-                Password="7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=", // Primer_123
-                Visible = true,
-                CreatedAt = DateTime.Now
-            },
-            new User{
-                Id=4,
-                FirstName = "Ivan",
-                LastName = "Ivanovic",
-                Email = "ivan@gmail.com",
-                Password="7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=", // Primer_123
-                Visible = true,
-                CreatedAt = DateTime.Now,
-            },
-            new User{
-                Id=5,
-                FirstName = "Nikola",
-                LastName = "Nikolic",
-                Email = "nikola@gmail.com",
-                Password="7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=", // Primer_123
-                Visible = true,
-                CreatedAt = DateTime.Now
-            },
-            new User{
-                Id=6,
-                FirstName = "Marija",
-                LastName = "Marjanovic",
-                Email = "marija@gmail.com",
-                Password="7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=", // Primer_123
-                Visible = true,
-                CreatedAt = DateTime.Now
-            },
-            new User{
-                Id=7,
-                FirstName = "Milinko",
-                LastName = "Milinkovic",
-                Email = "milinko@gmail.com",
-                Password="7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=", // Primer_123
-                Visible = true,
-                CreatedAt = DateTime.Now
-            },
-            new User{
-                Id=8,
-                FirstName = "Zdravko",
-                LastName = "Zdravkovic",
-                Email = "zdravko@gmail.com",
+                FirstName = "User",
+                LastName = "User",
+                Email = "User@gmail.com",
                 Password="7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=", // Primer_123
                 Visible = true,
                 CreatedAt = DateTime.Now
             }
             };
             modelBuilder.Entity<User>().HasData(fakeUsers);
+
             var fakePosts = new List<Post>
             {
                 new Post
@@ -122,7 +71,7 @@ namespace EFDataAccess
                     Title = "Post 1",
                     Content = "post1post1post1post1post1post1post1post1post1post1post1post1post1post1",
                     PhotoPath = "images/1.png",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -133,7 +82,7 @@ namespace EFDataAccess
                     Title = "Post 2",
                     Content = "post2post2post2post2post2post2post2post2post2post2post2",
                     PhotoPath = "images/2.png",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId = rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -144,7 +93,7 @@ namespace EFDataAccess
                     Title = "Post 3",
                     Content = "post3post3post3post3post3post3post3",
                     PhotoPath = "images/3.png",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId= rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -155,7 +104,7 @@ namespace EFDataAccess
                     Title = "Post 4",
                     Content = "post4post4post4post4post4post4post4post4post4post4",
                     PhotoPath = "images/4.png",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -166,7 +115,7 @@ namespace EFDataAccess
                     Title = "Post 5",
                     Content = "post1post1post1post1post1post1post1post1post1post1post1post1post1post1",
                     PhotoPath = "images/5.png",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -177,7 +126,7 @@ namespace EFDataAccess
                     Title = "Post 6",
                     Content = "post2post2post2post2post2post2post2post2post2",
                     PhotoPath = "images/6.png",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -188,7 +137,7 @@ namespace EFDataAccess
                     Title = "Post 7",
                     Content = "post3post3post3post3post3post3post3",
                     PhotoPath = "images/7.png",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -199,7 +148,7 @@ namespace EFDataAccess
                     Title = "Post 8",
                     Content = "post4post4post4post4post4post4post4post4post4",
                     PhotoPath = "images/8.png",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -210,7 +159,7 @@ namespace EFDataAccess
                     Title = "Post 9",
                     Content = "post1post1post1post1post1post1post1post1",
                     PhotoPath = "images/9.png",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -221,7 +170,7 @@ namespace EFDataAccess
                     Title = "Post 10",
                     Content = "post2post2post2post2post2post2post2post2post2",
                     PhotoPath = "images/10.jpg",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -232,7 +181,7 @@ namespace EFDataAccess
                     Title = "Post 11",
                     Content = "post3post3post3post3post3post3post3",
                     PhotoPath = "images/11.jpg",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -243,7 +192,7 @@ namespace EFDataAccess
                     Title = "Post 12",
                     Content = "post3post3post3post3post3post3post3",
                     PhotoPath = "images/12.jpg",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -254,7 +203,7 @@ namespace EFDataAccess
                     Title = "Post 13",
                     Content = "post1post2post3post4",
                     PhotoPath = "images/13.jpg",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -265,7 +214,7 @@ namespace EFDataAccess
                     Title = "Post 14",
                     Content = "post4post4post431",
                     PhotoPath = "images/14.jpg",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -276,7 +225,7 @@ namespace EFDataAccess
                     Title = "Post 15",
                     Content = "post4post4post431",
                     PhotoPath = "images/15.jpg",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -287,7 +236,7 @@ namespace EFDataAccess
                     Title = "Post 16",
                     Content = "post1post1post2post3",
                     PhotoPath = "images/16.jpg",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -298,7 +247,7 @@ namespace EFDataAccess
                     Title = "Post 17",
                     Content = "post1post1post2post3post2",
                     PhotoPath = "images/17.jpg",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -309,7 +258,7 @@ namespace EFDataAccess
                     Title = "Post 18",
                     Content = "post4post4post4post4post4post4post4",
                     PhotoPath = "images/18.jpg",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -320,7 +269,7 @@ namespace EFDataAccess
                     Title = "Post 19",
                     Content = "post2post2post2post2",
                     PhotoPath = "images/19.jpg",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -331,7 +280,7 @@ namespace EFDataAccess
                     Title = "Post 20",
                     Content = "post12post1post1post1post1",
                     PhotoPath = "images/20.jpg",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -342,7 +291,7 @@ namespace EFDataAccess
                     Title = "Post 21",
                     Content = "post12post1post1post1post4",
                     PhotoPath = "images/21.jpg",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -353,7 +302,7 @@ namespace EFDataAccess
                     Title = "Post 22",
                     Content = "post1post2post3post4",
                     PhotoPath = "images/22.jpg",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -364,7 +313,7 @@ namespace EFDataAccess
                     Title = "Post 23",
                     Content = "post1post2post3post4",
                     PhotoPath = "images/23.jpg",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
@@ -375,20 +324,21 @@ namespace EFDataAccess
                     Title = "Post 24",
                     Content = "this is a random content",
                     PhotoPath = "images/24.jpg",
-                    UserId = rand.Next(1,8),
+                    UserId = rand.Next(1,2),
                     TopicId=rand.Next(1,8),
                     Visible = true,
                     CreatedAt = DateTime.Now
                 }
             };
             modelBuilder.Entity<Post>().HasData(fakePosts);
+
             var fakeComments = new List<Comment>();
             for (int i = 1; i < 100; i++) 
             {
                 fakeComments.Add(new Comment
                 {
                     Id = i,
-                    UserId = rand.Next(1, 8),
+                    UserId = rand.Next(1, 2),
                     PostId = rand.Next(1, 24),
                     CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
                     Visible = true,
@@ -396,28 +346,24 @@ namespace EFDataAccess
                 });
             }
             modelBuilder.Entity<Comment>().HasData(fakeComments);
-            var fakeRatingsSeeding = new List<Rating>();
-            for (int i = 1; i < 100; i++) 
+
+            var fakeRatings = new List<Rating>();
+
+            for (int i = 1; i <= fakeUsers.Count(); i++) 
             {
-                fakeRatingsSeeding.Add(new Rating
-                {
-                    PostId = rand.Next(1, 24),
-                    UserId = rand.Next(1,8),
-                    Value = rand.Next(1,10),
-                    Visible = true,
-                    CreatedAt = DateTime.Now
-                });
-            }
-            
-            List<Rating> fakeRatings = fakeRatingsSeeding.GroupBy(x => new { x.PostId, x.UserId })
-                .Select(r => r.First())
-                .ToList();
-            for (int i = 0; i < fakeRatings.Count(); i++)
-            {
-                fakeRatings[i].Id = i + 1;
+                    fakeRatings.Add(new Rating
+                    {
+                        Id = i,
+                        PostId = i,
+                        UserId = i,
+                        Value = rand.Next(1, 10),
+                        Visible = true,
+                        CreatedAt = DateTime.Now
+                    });            
             }
 
             modelBuilder.Entity<Rating>().HasData(fakeRatings);
+
             var useCases = new List<UseCase> 
             { 
                 new UseCase { Id=1,Name="Create User"},
@@ -449,11 +395,49 @@ namespace EFDataAccess
                 new UseCase { Id=27,Name="Update UseCase"},
                 new UseCase { Id=28,Name="Search UseCases"},
                 new UseCase { Id=29,Name="Get One UseCase"},
-
-
-
+                new UseCase { Id=30,Name="Create UserUseCase"},
+                new UseCase { Id=31,Name="Search UserUseCases"},
             };
             modelBuilder.Entity<UseCase>().HasData(useCases);
+
+
+            var fakeUsersUseCase = new List<UserUseCase>();
+            for (int i = 1; i <= 29; i++)
+            {
+                fakeUsersUseCase.Add(new UserUseCase { 
+                    Id=i,
+                    UserId=1,
+                    UseCaseId=i,
+                    Visible=true,
+                    CreatedAt = DateTime.Now
+                });
+            }
+            var regularUserUseCases = new List<UserUseCase> 
+            {
+                new UserUseCase{ Id = 30,UserId=2,UseCaseId=2,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 31,UserId=2,UseCaseId=3,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 32,UserId=2,UseCaseId=7,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 33,UserId=2,UseCaseId=8,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 34,UserId=2,UseCaseId=9,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 35,UserId=2,UseCaseId=10,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 36,UserId=2,UseCaseId=11,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 37,UserId=2,UseCaseId=12,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 38,UserId=2,UseCaseId=13,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 39,UserId=2,UseCaseId=14,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 40,UserId=2,UseCaseId=16,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 41,UserId=2,UseCaseId=17,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 42,UserId=2,UseCaseId=18,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 43,UserId=2,UseCaseId=19,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 44,UserId=2,UseCaseId=20,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 45,UserId=2,UseCaseId=21,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 46,UserId=2,UseCaseId=23,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 47,UserId=2,UseCaseId=24,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 48,UserId=2,UseCaseId=25,Visible=true,CreatedAt=DateTime.Now},
+            };
+            fakeUsersUseCase.AddRange(regularUserUseCases);
+
+            modelBuilder.Entity<UserUseCase>().HasData(fakeUsersUseCase);
+
             modelBuilder.ApplyConfiguration(new TopicConfiguration());
             modelBuilder.ApplyConfiguration(new CommentConfiguration());
             modelBuilder.ApplyConfiguration(new PostConfiguration());

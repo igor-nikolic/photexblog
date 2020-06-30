@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Domain
+namespace Application.DTO
 {
-    public class UserUseCase : BaseEntity
+    public class UserUseCaseDto
     {
+        public int Id { get; set; }
         public int UserId { get; set; }
-        public virtual User User { get; set; }
         public int UseCaseId { get; set; }
-        public virtual UseCase UseCase { get; set; }
     }
 }

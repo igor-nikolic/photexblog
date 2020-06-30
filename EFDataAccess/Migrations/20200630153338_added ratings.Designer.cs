@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFDataAccess.Migrations
 {
     [DbContext(typeof(PhoTexBlogContext))]
-    [Migration("20200629154535_addes use case")]
-    partial class addesusecase
+    [Migration("20200630153338_added ratings")]
+    partial class addedratings
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -64,44 +64,44 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 1,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4681),
-                            PostId = 23,
-                            UserId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6346),
+                            PostId = 9,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 2,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4813),
-                            PostId = 17,
-                            UserId = 5,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6620),
+                            PostId = 4,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 3,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4825),
-                            PostId = 14,
-                            UserId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6635),
+                            PostId = 18,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 4,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4834),
-                            PostId = 12,
-                            UserId = 3,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6643),
+                            PostId = 8,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 5,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4842),
-                            PostId = 3,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6651),
+                            PostId = 14,
                             UserId = 1,
                             Visible = true
                         },
@@ -109,26 +109,26 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 6,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4855),
-                            PostId = 21,
-                            UserId = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6667),
+                            PostId = 8,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 7,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4863),
-                            PostId = 14,
-                            UserId = 3,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6676),
+                            PostId = 7,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 8,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4871),
-                            PostId = 23,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6683),
+                            PostId = 20,
                             UserId = 1,
                             Visible = true
                         },
@@ -136,44 +136,44 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 9,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4879),
-                            PostId = 16,
-                            UserId = 7,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6691),
+                            PostId = 9,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 10,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4889),
-                            PostId = 14,
-                            UserId = 2,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6702),
+                            PostId = 17,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 11,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4897),
-                            PostId = 3,
-                            UserId = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6709),
+                            PostId = 8,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 12,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4905),
-                            PostId = 19,
-                            UserId = 5,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6717),
+                            PostId = 10,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 13,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4912),
-                            PostId = 5,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6726),
+                            PostId = 4,
                             UserId = 1,
                             Visible = true
                         },
@@ -181,26 +181,26 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 14,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4919),
-                            PostId = 21,
-                            UserId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6734),
+                            PostId = 23,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 15,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4927),
-                            PostId = 12,
-                            UserId = 5,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6741),
+                            PostId = 20,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 16,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4934),
-                            PostId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6749),
+                            PostId = 16,
                             UserId = 1,
                             Visible = true
                         },
@@ -208,8 +208,8 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 17,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4942),
-                            PostId = 5,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6756),
+                            PostId = 15,
                             UserId = 1,
                             Visible = true
                         },
@@ -217,125 +217,125 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 18,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4953),
-                            PostId = 20,
-                            UserId = 5,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6766),
+                            PostId = 7,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 19,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4960),
-                            PostId = 14,
-                            UserId = 2,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6773),
+                            PostId = 5,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 20,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4968),
-                            PostId = 11,
-                            UserId = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6781),
+                            PostId = 2,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 21,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4976),
-                            PostId = 17,
-                            UserId = 3,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6789),
+                            PostId = 13,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 22,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4983),
-                            PostId = 21,
-                            UserId = 5,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6797),
+                            PostId = 2,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 23,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4991),
-                            PostId = 3,
-                            UserId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6805),
+                            PostId = 23,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 24,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(4998),
-                            PostId = 21,
-                            UserId = 3,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6812),
+                            PostId = 13,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 25,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5005),
-                            PostId = 23,
-                            UserId = 5,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6820),
+                            PostId = 16,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 26,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5013),
-                            PostId = 11,
-                            UserId = 3,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6828),
+                            PostId = 6,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 27,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5020),
-                            PostId = 19,
-                            UserId = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6835),
+                            PostId = 18,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 28,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5028),
-                            PostId = 8,
-                            UserId = 5,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6843),
+                            PostId = 19,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 29,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5035),
-                            PostId = 19,
-                            UserId = 2,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6850),
+                            PostId = 10,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 30,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5043),
-                            PostId = 7,
-                            UserId = 5,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6858),
+                            PostId = 11,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 31,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5050),
-                            PostId = 13,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6865),
+                            PostId = 15,
                             UserId = 1,
                             Visible = true
                         },
@@ -343,17 +343,17 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 32,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5058),
-                            PostId = 14,
-                            UserId = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6873),
+                            PostId = 1,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 33,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5066),
-                            PostId = 15,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6881),
+                            PostId = 20,
                             UserId = 1,
                             Visible = true
                         },
@@ -361,89 +361,89 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 34,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5076),
-                            PostId = 3,
-                            UserId = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6891),
+                            PostId = 7,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 35,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5084),
-                            PostId = 7,
-                            UserId = 7,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6899),
+                            PostId = 6,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 36,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5092),
-                            PostId = 8,
-                            UserId = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6906),
+                            PostId = 14,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 37,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5099),
-                            PostId = 18,
-                            UserId = 7,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6914),
+                            PostId = 17,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 38,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5107),
-                            PostId = 2,
-                            UserId = 3,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6921),
+                            PostId = 1,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 39,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5114),
-                            PostId = 19,
-                            UserId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6969),
+                            PostId = 6,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 40,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5122),
-                            PostId = 2,
-                            UserId = 2,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6977),
+                            PostId = 15,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 41,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5129),
-                            PostId = 14,
-                            UserId = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6985),
+                            PostId = 7,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 42,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5137),
-                            PostId = 17,
-                            UserId = 2,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(6992),
+                            PostId = 21,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 43,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5144),
-                            PostId = 14,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7000),
+                            PostId = 10,
                             UserId = 1,
                             Visible = true
                         },
@@ -451,35 +451,35 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 44,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5152),
-                            PostId = 8,
-                            UserId = 3,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7007),
+                            PostId = 23,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 45,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5159),
-                            PostId = 7,
-                            UserId = 5,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7015),
+                            PostId = 1,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 46,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5167),
-                            PostId = 9,
-                            UserId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7022),
+                            PostId = 2,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 47,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5174),
-                            PostId = 11,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7030),
+                            PostId = 2,
                             UserId = 1,
                             Visible = true
                         },
@@ -487,170 +487,170 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 48,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5182),
-                            PostId = 18,
-                            UserId = 3,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7037),
+                            PostId = 7,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 49,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5189),
-                            PostId = 1,
-                            UserId = 7,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7045),
+                            PostId = 12,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 50,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5197),
-                            PostId = 22,
-                            UserId = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7053),
+                            PostId = 23,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 51,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5204),
-                            PostId = 6,
-                            UserId = 3,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7060),
+                            PostId = 2,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 52,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5212),
-                            PostId = 10,
-                            UserId = 7,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7068),
+                            PostId = 9,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 53,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5219),
-                            PostId = 2,
-                            UserId = 2,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7075),
+                            PostId = 13,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 54,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5227),
-                            PostId = 1,
-                            UserId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7084),
+                            PostId = 16,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 55,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5234),
-                            PostId = 13,
-                            UserId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7091),
+                            PostId = 1,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 56,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5242),
-                            PostId = 11,
-                            UserId = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7098),
+                            PostId = 19,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 57,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5249),
-                            PostId = 13,
-                            UserId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7106),
+                            PostId = 21,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 58,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5257),
-                            PostId = 12,
-                            UserId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7113),
+                            PostId = 14,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 59,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5265),
-                            PostId = 2,
-                            UserId = 3,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7121),
+                            PostId = 20,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 60,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5272),
-                            PostId = 13,
-                            UserId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7129),
+                            PostId = 12,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 61,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5280),
-                            PostId = 12,
-                            UserId = 2,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7136),
+                            PostId = 14,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 62,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5287),
-                            PostId = 16,
-                            UserId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7143),
+                            PostId = 12,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 63,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5315),
-                            PostId = 11,
-                            UserId = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7151),
+                            PostId = 7,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 64,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5323),
-                            PostId = 11,
-                            UserId = 3,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7158),
+                            PostId = 18,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 65,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5331),
-                            PostId = 13,
-                            UserId = 3,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7166),
+                            PostId = 11,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 66,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5342),
-                            PostId = 12,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7177),
+                            PostId = 8,
                             UserId = 1,
                             Visible = true
                         },
@@ -658,8 +658,8 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 67,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5350),
-                            PostId = 7,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7185),
+                            PostId = 14,
                             UserId = 1,
                             Visible = true
                         },
@@ -667,35 +667,35 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 68,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5357),
-                            PostId = 15,
-                            UserId = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7192),
+                            PostId = 18,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 69,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5365),
-                            PostId = 18,
-                            UserId = 5,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7200),
+                            PostId = 22,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 70,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5372),
-                            PostId = 2,
-                            UserId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7207),
+                            PostId = 5,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 71,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5380),
-                            PostId = 9,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7214),
+                            PostId = 15,
                             UserId = 1,
                             Visible = true
                         },
@@ -703,35 +703,35 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 72,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5387),
-                            PostId = 2,
-                            UserId = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7222),
+                            PostId = 14,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 73,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5395),
-                            PostId = 3,
-                            UserId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7229),
+                            PostId = 11,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 74,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5402),
-                            PostId = 12,
-                            UserId = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7237),
+                            PostId = 19,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 75,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5410),
-                            PostId = 20,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7244),
+                            PostId = 14,
                             UserId = 1,
                             Visible = true
                         },
@@ -739,161 +739,161 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 76,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5418),
-                            PostId = 21,
-                            UserId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7252),
+                            PostId = 22,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 77,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5425),
-                            PostId = 7,
-                            UserId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7259),
+                            PostId = 16,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 78,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5433),
-                            PostId = 19,
-                            UserId = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7267),
+                            PostId = 20,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 79,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5440),
-                            PostId = 7,
-                            UserId = 5,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7274),
+                            PostId = 14,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 80,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5448),
-                            PostId = 17,
-                            UserId = 5,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7282),
+                            PostId = 1,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 81,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5455),
-                            PostId = 2,
-                            UserId = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7289),
+                            PostId = 15,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 82,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5463),
-                            PostId = 22,
-                            UserId = 5,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7297),
+                            PostId = 13,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 83,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5470),
-                            PostId = 7,
-                            UserId = 3,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7304),
+                            PostId = 15,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 84,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5478),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7312),
                             PostId = 7,
-                            UserId = 4,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 85,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5485),
-                            PostId = 19,
-                            UserId = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7319),
+                            PostId = 21,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 86,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5493),
-                            PostId = 14,
-                            UserId = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7327),
+                            PostId = 9,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 87,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5500),
-                            PostId = 10,
-                            UserId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7334),
+                            PostId = 3,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 88,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5508),
-                            PostId = 20,
-                            UserId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7342),
+                            PostId = 23,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 89,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5515),
-                            PostId = 11,
-                            UserId = 5,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7349),
+                            PostId = 4,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 90,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5523),
-                            PostId = 15,
-                            UserId = 2,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7357),
+                            PostId = 12,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 91,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5530),
-                            PostId = 20,
-                            UserId = 5,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7364),
+                            PostId = 2,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 92,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5538),
-                            PostId = 13,
-                            UserId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7372),
+                            PostId = 22,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 93,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5545),
-                            PostId = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7379),
+                            PostId = 8,
                             UserId = 1,
                             Visible = true
                         },
@@ -901,35 +901,35 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 94,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5553),
-                            PostId = 18,
-                            UserId = 7,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7387),
+                            PostId = 10,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 95,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5560),
-                            PostId = 22,
-                            UserId = 4,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7394),
+                            PostId = 9,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 96,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5568),
-                            PostId = 9,
-                            UserId = 7,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7402),
+                            PostId = 16,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 97,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5575),
-                            PostId = 19,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7409),
+                            PostId = 13,
                             UserId = 1,
                             Visible = true
                         },
@@ -937,18 +937,18 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 98,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5583),
-                            PostId = 23,
-                            UserId = 3,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7416),
+                            PostId = 10,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 99,
                             CommentText = "In sit amet libero vestibulum, rutrum enim dictum, sagittis ipsum. Vestibulum at magna sagittis, gravida turpis a, luctus sapien. Duis ac ipsum ac ante iaculis rhoncus. Nullam eu urna in dolor lobortis cursus. ",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(5590),
-                            PostId = 21,
-                            UserId = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 896, DateTimeKind.Local).AddTicks(7424),
+                            PostId = 11,
+                            UserId = 1,
                             Visible = true
                         });
                 });
@@ -1005,98 +1005,98 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 1,
                             Content = "post1post1post1post1post1post1post1post1post1post1post1post1post1post1",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(633),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8112),
                             PhotoPath = "images/1.png",
                             Title = "Post 1",
-                            TopicId = 6,
-                            UserId = 2,
+                            TopicId = 5,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 2,
                             Content = "post2post2post2post2post2post2post2post2post2post2post2",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(895),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8385),
                             PhotoPath = "images/2.png",
                             Title = "Post 2",
-                            TopicId = 6,
-                            UserId = 3,
+                            TopicId = 3,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 3,
                             Content = "post3post3post3post3post3post3post3",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(915),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8405),
                             PhotoPath = "images/3.png",
                             Title = "Post 3",
-                            TopicId = 6,
-                            UserId = 4,
+                            TopicId = 1,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 4,
                             Content = "post4post4post4post4post4post4post4post4post4post4",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(927),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8420),
                             PhotoPath = "images/4.png",
                             Title = "Post 4",
-                            TopicId = 7,
-                            UserId = 5,
+                            TopicId = 2,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 5,
                             Content = "post1post1post1post1post1post1post1post1post1post1post1post1post1post1",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(939),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8431),
                             PhotoPath = "images/5.png",
                             Title = "Post 5",
-                            TopicId = 2,
-                            UserId = 6,
+                            TopicId = 1,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 6,
                             Content = "post2post2post2post2post2post2post2post2post2",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(955),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8450),
                             PhotoPath = "images/6.png",
                             Title = "Post 6",
-                            TopicId = 2,
-                            UserId = 7,
+                            TopicId = 5,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 7,
                             Content = "post3post3post3post3post3post3post3",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(966),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8462),
                             PhotoPath = "images/7.png",
                             Title = "Post 7",
-                            TopicId = 1,
-                            UserId = 3,
+                            TopicId = 3,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 8,
                             Content = "post4post4post4post4post4post4post4post4post4",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(977),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8477),
                             PhotoPath = "images/8.png",
                             Title = "Post 8",
-                            TopicId = 5,
-                            UserId = 6,
+                            TopicId = 7,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 9,
                             Content = "post1post1post1post1post1post1post1post1",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(989),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8491),
                             PhotoPath = "images/9.png",
                             Title = "Post 9",
-                            TopicId = 1,
+                            TopicId = 7,
                             UserId = 1,
                             Visible = true
                         },
@@ -1104,43 +1104,43 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 10,
                             Content = "post2post2post2post2post2post2post2post2post2",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(1004),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8506),
                             PhotoPath = "images/10.jpg",
                             Title = "Post 10",
-                            TopicId = 7,
-                            UserId = 6,
+                            TopicId = 5,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 11,
                             Content = "post3post3post3post3post3post3post3",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(1015),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8519),
                             PhotoPath = "images/11.jpg",
                             Title = "Post 11",
-                            TopicId = 5,
-                            UserId = 6,
+                            TopicId = 1,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 12,
                             Content = "post3post3post3post3post3post3post3",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(1026),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8532),
                             PhotoPath = "images/12.jpg",
                             Title = "Post 12",
                             TopicId = 2,
-                            UserId = 6,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 13,
                             Content = "post1post2post3post4",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(1036),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8543),
                             PhotoPath = "images/13.jpg",
                             Title = "Post 13",
-                            TopicId = 4,
+                            TopicId = 2,
                             UserId = 1,
                             Visible = true
                         },
@@ -1148,43 +1148,43 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 14,
                             Content = "post4post4post431",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(1047),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8556),
                             PhotoPath = "images/14.jpg",
                             Title = "Post 14",
-                            TopicId = 1,
-                            UserId = 4,
+                            TopicId = 7,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 15,
                             Content = "post4post4post431",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(1059),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8569),
                             PhotoPath = "images/15.jpg",
                             Title = "Post 15",
-                            TopicId = 6,
-                            UserId = 6,
+                            TopicId = 3,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 16,
                             Content = "post1post1post2post3",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(1070),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8634),
                             PhotoPath = "images/16.jpg",
                             Title = "Post 16",
                             TopicId = 2,
-                            UserId = 3,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 17,
                             Content = "post1post1post2post3post2",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(1081),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8646),
                             PhotoPath = "images/17.jpg",
                             Title = "Post 17",
-                            TopicId = 5,
+                            TopicId = 4,
                             UserId = 1,
                             Visible = true
                         },
@@ -1192,18 +1192,18 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 18,
                             Content = "post4post4post4post4post4post4post4",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(1095),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8661),
                             PhotoPath = "images/18.jpg",
                             Title = "Post 18",
-                            TopicId = 5,
-                            UserId = 2,
+                            TopicId = 3,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 19,
                             Content = "post2post2post2post2",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(1106),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8673),
                             PhotoPath = "images/19.jpg",
                             Title = "Post 19",
                             TopicId = 3,
@@ -1214,10 +1214,10 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 20,
                             Content = "post12post1post1post1post1",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(1118),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8685),
                             PhotoPath = "images/20.jpg",
                             Title = "Post 20",
-                            TopicId = 5,
+                            TopicId = 2,
                             UserId = 1,
                             Visible = true
                         },
@@ -1225,32 +1225,32 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 21,
                             Content = "post12post1post1post1post4",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(1129),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8697),
                             PhotoPath = "images/21.jpg",
                             Title = "Post 21",
-                            TopicId = 6,
-                            UserId = 4,
+                            TopicId = 2,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 22,
                             Content = "post1post2post3post4",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(1141),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8708),
                             PhotoPath = "images/22.jpg",
                             Title = "Post 22",
-                            TopicId = 3,
-                            UserId = 7,
+                            TopicId = 7,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 23,
                             Content = "post1post2post3post4",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(1152),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8719),
                             PhotoPath = "images/23.jpg",
                             Title = "Post 23",
-                            TopicId = 7,
+                            TopicId = 2,
                             UserId = 1,
                             Visible = true
                         },
@@ -1258,11 +1258,11 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 24,
                             Content = "this is a random content",
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(1189),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(8730),
                             PhotoPath = "images/24.jpg",
                             Title = "Post 24",
-                            TopicId = 3,
-                            UserId = 3,
+                            TopicId = 5,
+                            UserId = 1,
                             Visible = true
                         });
                 });
@@ -1308,685 +1308,19 @@ namespace EFDataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9298),
-                            PostId = 16,
-                            UserId = 2,
-                            Value = 6,
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 897, DateTimeKind.Local).AddTicks(2182),
+                            PostId = 1,
+                            UserId = 1,
+                            Value = 8,
                             Visible = true
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9443),
-                            PostId = 13,
-                            UserId = 5,
-                            Value = 2,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9460),
-                            PostId = 1,
-                            UserId = 7,
-                            Value = 4,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9469),
-                            PostId = 4,
-                            UserId = 6,
-                            Value = 9,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9477),
-                            PostId = 4,
-                            UserId = 2,
-                            Value = 2,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9490),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 897, DateTimeKind.Local).AddTicks(2382),
                             PostId = 2,
-                            UserId = 1,
-                            Value = 8,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9499),
-                            PostId = 15,
-                            UserId = 1,
-                            Value = 8,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9506),
-                            PostId = 4,
-                            UserId = 3,
-                            Value = 7,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 9,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9514),
-                            PostId = 17,
-                            UserId = 6,
-                            Value = 9,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 10,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9545),
-                            PostId = 12,
-                            UserId = 4,
-                            Value = 7,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 11,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9554),
-                            PostId = 2,
-                            UserId = 4,
-                            Value = 1,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 12,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9561),
-                            PostId = 18,
-                            UserId = 6,
-                            Value = 9,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 13,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9569),
-                            PostId = 23,
-                            UserId = 1,
-                            Value = 2,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 14,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9577),
-                            PostId = 6,
-                            UserId = 4,
-                            Value = 3,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 15,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9585),
-                            PostId = 21,
-                            UserId = 6,
-                            Value = 9,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 16,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9592),
-                            PostId = 16,
-                            UserId = 6,
-                            Value = 6,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 17,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9600),
-                            PostId = 6,
-                            UserId = 1,
-                            Value = 7,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 18,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9610),
-                            PostId = 11,
-                            UserId = 3,
-                            Value = 7,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 19,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9626),
-                            PostId = 23,
-                            UserId = 6,
-                            Value = 9,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 20,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9634),
-                            PostId = 7,
-                            UserId = 4,
-                            Value = 4,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 21,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9649),
-                            PostId = 20,
-                            UserId = 3,
-                            Value = 5,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 22,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9656),
-                            PostId = 4,
-                            UserId = 1,
-                            Value = 9,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 23,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9664),
-                            PostId = 18,
-                            UserId = 3,
-                            Value = 5,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 24,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9672),
-                            PostId = 14,
                             UserId = 2,
-                            Value = 5,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 25,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9679),
-                            PostId = 17,
-                            UserId = 1,
-                            Value = 1,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 26,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9687),
-                            PostId = 6,
-                            UserId = 2,
-                            Value = 5,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 27,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9695),
-                            PostId = 23,
-                            UserId = 5,
-                            Value = 2,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 28,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9702),
-                            PostId = 8,
-                            UserId = 6,
-                            Value = 3,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 29,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9710),
-                            PostId = 3,
-                            UserId = 1,
-                            Value = 3,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 30,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9718),
-                            PostId = 6,
-                            UserId = 7,
-                            Value = 1,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 31,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9725),
-                            PostId = 21,
-                            UserId = 3,
-                            Value = 8,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 32,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9744),
-                            PostId = 5,
-                            UserId = 1,
-                            Value = 9,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 33,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9767),
-                            PostId = 10,
-                            UserId = 2,
-                            Value = 8,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 34,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9774),
-                            PostId = 21,
-                            UserId = 1,
-                            Value = 3,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 35,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9782),
-                            PostId = 22,
-                            UserId = 5,
-                            Value = 5,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 36,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9790),
-                            PostId = 3,
-                            UserId = 4,
-                            Value = 6,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 37,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9805),
-                            PostId = 17,
-                            UserId = 4,
-                            Value = 5,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 38,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9812),
-                            PostId = 11,
-                            UserId = 5,
-                            Value = 9,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 39,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9820),
-                            PostId = 16,
-                            UserId = 7,
-                            Value = 2,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 40,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9828),
-                            PostId = 13,
-                            UserId = 1,
-                            Value = 2,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 41,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9835),
-                            PostId = 12,
-                            UserId = 2,
-                            Value = 8,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 42,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9851),
-                            PostId = 2,
-                            UserId = 5,
-                            Value = 7,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 43,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9866),
-                            PostId = 18,
-                            UserId = 7,
-                            Value = 6,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 44,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9873),
-                            PostId = 8,
-                            UserId = 5,
-                            Value = 3,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 45,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9881),
-                            PostId = 19,
-                            UserId = 1,
-                            Value = 1,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 46,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9896),
-                            PostId = 11,
-                            UserId = 6,
-                            Value = 8,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 47,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9904),
-                            PostId = 7,
-                            UserId = 6,
-                            Value = 3,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 48,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9911),
-                            PostId = 14,
-                            UserId = 3,
-                            Value = 1,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 49,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9919),
-                            PostId = 2,
-                            UserId = 3,
                             Value = 4,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 50,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9927),
-                            PostId = 14,
-                            UserId = 6,
-                            Value = 5,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 51,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9934),
-                            PostId = 10,
-                            UserId = 1,
-                            Value = 4,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 52,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9942),
-                            PostId = 7,
-                            UserId = 2,
-                            Value = 2,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 53,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9950),
-                            PostId = 14,
-                            UserId = 5,
-                            Value = 7,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 54,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9957),
-                            PostId = 8,
-                            UserId = 3,
-                            Value = 4,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 55,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9965),
-                            PostId = 22,
-                            UserId = 6,
-                            Value = 9,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 56,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9972),
-                            PostId = 4,
-                            UserId = 5,
-                            Value = 2,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 57,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9983),
-                            PostId = 15,
-                            UserId = 6,
-                            Value = 4,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 58,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 788, DateTimeKind.Local).AddTicks(9999),
-                            PostId = 12,
-                            UserId = 6,
-                            Value = 1,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 59,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 789, DateTimeKind.Local).AddTicks(7),
-                            PostId = 21,
-                            UserId = 5,
-                            Value = 6,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 60,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 789, DateTimeKind.Local).AddTicks(14),
-                            PostId = 6,
-                            UserId = 6,
-                            Value = 7,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 61,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 789, DateTimeKind.Local).AddTicks(29),
-                            PostId = 16,
-                            UserId = 5,
-                            Value = 7,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 62,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 789, DateTimeKind.Local).AddTicks(37),
-                            PostId = 3,
-                            UserId = 7,
-                            Value = 1,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 63,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 789, DateTimeKind.Local).AddTicks(110),
-                            PostId = 10,
-                            UserId = 6,
-                            Value = 4,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 64,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 789, DateTimeKind.Local).AddTicks(118),
-                            PostId = 3,
-                            UserId = 5,
-                            Value = 9,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 65,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 789, DateTimeKind.Local).AddTicks(133),
-                            PostId = 14,
-                            UserId = 1,
-                            Value = 3,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 66,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 789, DateTimeKind.Local).AddTicks(141),
-                            PostId = 1,
-                            UserId = 4,
-                            Value = 1,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 67,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 789, DateTimeKind.Local).AddTicks(148),
-                            PostId = 10,
-                            UserId = 4,
-                            Value = 8,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 68,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 789, DateTimeKind.Local).AddTicks(156),
-                            PostId = 7,
-                            UserId = 3,
-                            Value = 8,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 69,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 789, DateTimeKind.Local).AddTicks(171),
-                            PostId = 10,
-                            UserId = 7,
-                            Value = 8,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 70,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 789, DateTimeKind.Local).AddTicks(179),
-                            PostId = 18,
-                            UserId = 1,
-                            Value = 8,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 71,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 789, DateTimeKind.Local).AddTicks(201),
-                            PostId = 8,
-                            UserId = 7,
-                            Value = 3,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 72,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 789, DateTimeKind.Local).AddTicks(209),
-                            PostId = 2,
-                            UserId = 6,
-                            Value = 9,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 73,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 789, DateTimeKind.Local).AddTicks(217),
-                            PostId = 17,
-                            UserId = 2,
-                            Value = 6,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 74,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 789, DateTimeKind.Local).AddTicks(240),
-                            PostId = 5,
-                            UserId = 6,
-                            Value = 5,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 75,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 789, DateTimeKind.Local).AddTicks(255),
-                            PostId = 7,
-                            UserId = 5,
-                            Value = 8,
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 76,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 789, DateTimeKind.Local).AddTicks(263),
-                            PostId = 5,
-                            UserId = 3,
-                            Value = 1,
                             Visible = true
                         });
                 });
@@ -2026,56 +1360,56 @@ namespace EFDataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 773, DateTimeKind.Local).AddTicks(8872),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 882, DateTimeKind.Local).AddTicks(7006),
                             Name = "Topic 1",
                             Visible = true
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 783, DateTimeKind.Local).AddTicks(4797),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 889, DateTimeKind.Local).AddTicks(7556),
                             Name = "Topic 2",
                             Visible = true
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 783, DateTimeKind.Local).AddTicks(4893),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 889, DateTimeKind.Local).AddTicks(7654),
                             Name = "Topic 3",
                             Visible = true
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 783, DateTimeKind.Local).AddTicks(4906),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 889, DateTimeKind.Local).AddTicks(7712),
                             Name = "Topic 4",
                             Visible = true
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 783, DateTimeKind.Local).AddTicks(4917),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 889, DateTimeKind.Local).AddTicks(7723),
                             Name = "Topic 5",
                             Visible = true
                         },
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 783, DateTimeKind.Local).AddTicks(4935),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 889, DateTimeKind.Local).AddTicks(7744),
                             Name = "Topic 6",
                             Visible = true
                         },
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 783, DateTimeKind.Local).AddTicks(4946),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 889, DateTimeKind.Local).AddTicks(7753),
                             Name = "Topic 7",
                             Visible = true
                         },
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 783, DateTimeKind.Local).AddTicks(4955),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 889, DateTimeKind.Local).AddTicks(7762),
                             Name = "Topic 8",
                             Visible = true
                         });
@@ -2098,78 +1432,6 @@ namespace EFDataAccess.Migrations
                         .IsUnique();
 
                     b.ToTable("UseCases");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Name = "Create User"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Name = "Soft Delete User"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Name = "Update User"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Name = "Create Topic"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Name = "Soft Delete Topic"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Name = "Update Topic"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Name = "Create Post"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Name = "Soft Delete Post"
-                        },
-                        new
-                        {
-                            Id = 9,
-                            Name = "Update Post"
-                        },
-                        new
-                        {
-                            Id = 10,
-                            Name = "Create Rating"
-                        },
-                        new
-                        {
-                            Id = 11,
-                            Name = "Update Rating"
-                        },
-                        new
-                        {
-                            Id = 12,
-                            Name = "Create Comment"
-                        },
-                        new
-                        {
-                            Id = 13,
-                            Name = "Soft Delete Comment"
-                        },
-                        new
-                        {
-                            Id = 14,
-                            Name = "Update Comment"
-                        });
                 });
 
             modelBuilder.Entity("Domain.UseCaseLog", b =>
@@ -2249,80 +1511,20 @@ namespace EFDataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 787, DateTimeKind.Local).AddTicks(4068),
-                            Email = "pera@gmail.com",
-                            FirstName = "Pera",
-                            LastName = "Peric",
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(2101),
+                            Email = "admin@gmail.com",
+                            FirstName = "Admin",
+                            LastName = "Admin",
                             Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
                             Visible = true
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 787, DateTimeKind.Local).AddTicks(4325),
-                            Email = "marko@gmail.com",
-                            FirstName = "Marko",
-                            LastName = "Markovic",
-                            Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 787, DateTimeKind.Local).AddTicks(4345),
-                            Email = "petar@gmail.com",
-                            FirstName = "Petar",
-                            LastName = "Petrovic",
-                            Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 787, DateTimeKind.Local).AddTicks(4359),
-                            Email = "ivan@gmail.com",
-                            FirstName = "Ivan",
-                            LastName = "Ivanovic",
-                            Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 787, DateTimeKind.Local).AddTicks(4372),
-                            Email = "nikola@gmail.com",
-                            FirstName = "Nikola",
-                            LastName = "Nikolic",
-                            Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 787, DateTimeKind.Local).AddTicks(4435),
-                            Email = "marija@gmail.com",
-                            FirstName = "Marija",
-                            LastName = "Marjanovic",
-                            Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 787, DateTimeKind.Local).AddTicks(4448),
-                            Email = "milinko@gmail.com",
-                            FirstName = "Milinko",
-                            LastName = "Milinkovic",
-                            Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CreatedAt = new DateTime(2020, 6, 29, 17, 45, 33, 787, DateTimeKind.Local).AddTicks(4460),
-                            Email = "zdravko@gmail.com",
-                            FirstName = "Zdravko",
-                            LastName = "Zdravkovic",
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 33, 36, 894, DateTimeKind.Local).AddTicks(2389),
+                            Email = "User@gmail.com",
+                            FirstName = "User",
+                            LastName = "User",
                             Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
                             Visible = true
                         });
@@ -2335,6 +1537,21 @@ namespace EFDataAccess.Migrations
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Visible")
+                        .HasColumnType("bit");
 
                     b.HasKey("UseCaseId", "UserId");
 

@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EFDataAccess.Migrations
 {
     [DbContext(typeof(PhoTexBlogContext))]
-    [Migration("20200628141226_db seeding, added posts")]
-    partial class dbseedingaddedposts
+    [Migration("20200630153222_added posts")]
+    partial class addedposts
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,8 +30,8 @@ namespace EFDataAccess.Migrations
 
                     b.Property<string>("CommentText")
                         .IsRequired()
-                        .HasColumnType("nvarchar(100)")
-                        .HasMaxLength(100);
+                        .HasColumnType("nvarchar(1000)")
+                        .HasMaxLength(1000);
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
@@ -112,43 +112,43 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 1,
                             Content = "post1post1post1post1post1post1post1post1post1post1post1post1post1post1",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(6954),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(5967),
                             PhotoPath = "images/1.png",
                             Title = "Post 1",
                             TopicId = 6,
-                            UserId = 3,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 2,
                             Content = "post2post2post2post2post2post2post2post2post2post2post2",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7132),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6206),
                             PhotoPath = "images/2.png",
                             Title = "Post 2",
-                            TopicId = 2,
-                            UserId = 4,
+                            TopicId = 6,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 3,
                             Content = "post3post3post3post3post3post3post3",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7149),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6226),
                             PhotoPath = "images/3.png",
                             Title = "Post 3",
                             TopicId = 5,
-                            UserId = 4,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 4,
                             Content = "post4post4post4post4post4post4post4post4post4post4",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7161),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6238),
                             PhotoPath = "images/4.png",
                             Title = "Post 4",
-                            TopicId = 7,
+                            TopicId = 5,
                             UserId = 1,
                             Visible = true
                         },
@@ -156,220 +156,220 @@ namespace EFDataAccess.Migrations
                         {
                             Id = 5,
                             Content = "post1post1post1post1post1post1post1post1post1post1post1post1post1post1",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7173),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6250),
                             PhotoPath = "images/5.png",
                             Title = "Post 5",
-                            TopicId = 7,
-                            UserId = 4,
+                            TopicId = 5,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 6,
                             Content = "post2post2post2post2post2post2post2post2post2",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7190),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6269),
                             PhotoPath = "images/6.png",
                             Title = "Post 6",
-                            TopicId = 6,
-                            UserId = 6,
+                            TopicId = 2,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 7,
                             Content = "post3post3post3post3post3post3post3",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7201),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6280),
                             PhotoPath = "images/7.png",
                             Title = "Post 7",
-                            TopicId = 5,
-                            UserId = 2,
+                            TopicId = 1,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 8,
                             Content = "post4post4post4post4post4post4post4post4post4",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7213),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6292),
                             PhotoPath = "images/8.png",
                             Title = "Post 8",
-                            TopicId = 4,
-                            UserId = 6,
+                            TopicId = 5,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 9,
                             Content = "post1post1post1post1post1post1post1post1",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7225),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6304),
                             PhotoPath = "images/9.png",
                             Title = "Post 9",
                             TopicId = 3,
-                            UserId = 7,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 10,
                             Content = "post2post2post2post2post2post2post2post2post2",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7239),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6319),
                             PhotoPath = "images/10.jpg",
                             Title = "Post 10",
-                            TopicId = 4,
-                            UserId = 7,
+                            TopicId = 2,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 11,
                             Content = "post3post3post3post3post3post3post3",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7250),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6330),
                             PhotoPath = "images/11.jpg",
                             Title = "Post 11",
-                            TopicId = 5,
-                            UserId = 2,
+                            TopicId = 3,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 12,
                             Content = "post3post3post3post3post3post3post3",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7261),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6382),
                             PhotoPath = "images/12.jpg",
                             Title = "Post 12",
-                            TopicId = 4,
-                            UserId = 3,
+                            TopicId = 3,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 13,
                             Content = "post1post2post3post4",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7273),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6398),
                             PhotoPath = "images/13.jpg",
                             Title = "Post 13",
                             TopicId = 4,
-                            UserId = 6,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 14,
                             Content = "post4post4post431",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7284),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6410),
                             PhotoPath = "images/14.jpg",
                             Title = "Post 14",
                             TopicId = 7,
-                            UserId = 5,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 15,
                             Content = "post4post4post431",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7295),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6420),
                             PhotoPath = "images/15.jpg",
                             Title = "Post 15",
-                            TopicId = 3,
-                            UserId = 7,
+                            TopicId = 7,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 16,
                             Content = "post1post1post2post3",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7306),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6431),
                             PhotoPath = "images/16.jpg",
                             Title = "Post 16",
-                            TopicId = 7,
-                            UserId = 2,
+                            TopicId = 4,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 17,
                             Content = "post1post1post2post3post2",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7317),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6443),
                             PhotoPath = "images/17.jpg",
                             Title = "Post 17",
-                            TopicId = 4,
-                            UserId = 7,
+                            TopicId = 5,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 18,
                             Content = "post4post4post4post4post4post4post4",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7331),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6460),
                             PhotoPath = "images/18.jpg",
                             Title = "Post 18",
-                            TopicId = 5,
-                            UserId = 2,
+                            TopicId = 4,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 19,
                             Content = "post2post2post2post2",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7406),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6470),
                             PhotoPath = "images/19.jpg",
                             Title = "Post 19",
-                            TopicId = 1,
-                            UserId = 5,
+                            TopicId = 3,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 20,
                             Content = "post12post1post1post1post1",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7420),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6482),
                             PhotoPath = "images/20.jpg",
                             Title = "Post 20",
-                            TopicId = 7,
-                            UserId = 4,
+                            TopicId = 6,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 21,
                             Content = "post12post1post1post1post4",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7432),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6493),
                             PhotoPath = "images/21.jpg",
                             Title = "Post 21",
-                            TopicId = 2,
-                            UserId = 2,
+                            TopicId = 1,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 22,
                             Content = "post1post2post3post4",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7443),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6504),
                             PhotoPath = "images/22.jpg",
                             Title = "Post 22",
-                            TopicId = 2,
-                            UserId = 7,
+                            TopicId = 6,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 23,
                             Content = "post1post2post3post4",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7455),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6514),
                             PhotoPath = "images/23.jpg",
                             Title = "Post 23",
-                            TopicId = 4,
-                            UserId = 2,
+                            TopicId = 3,
+                            UserId = 1,
                             Visible = true
                         },
                         new
                         {
                             Id = 24,
                             Content = "this is a random content",
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(7468),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 782, DateTimeKind.Local).AddTicks(6526),
                             PhotoPath = "images/24.jpg",
                             Title = "Post 24",
-                            TopicId = 1,
-                            UserId = 3,
+                            TopicId = 6,
+                            UserId = 1,
                             Visible = true
                         });
                 });
@@ -406,7 +406,8 @@ namespace EFDataAccess.Migrations
 
                     b.HasIndex("PostId");
 
-                    b.HasIndex("UserId");
+                    b.HasIndex("UserId", "PostId")
+                        .IsUnique();
 
                     b.ToTable("Ratings");
                 });
@@ -446,56 +447,56 @@ namespace EFDataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 986, DateTimeKind.Local).AddTicks(2172),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 769, DateTimeKind.Local).AddTicks(6414),
                             Name = "Topic 1",
                             Visible = true
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 993, DateTimeKind.Local).AddTicks(4659),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 775, DateTimeKind.Local).AddTicks(7662),
                             Name = "Topic 2",
                             Visible = true
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 993, DateTimeKind.Local).AddTicks(4756),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 775, DateTimeKind.Local).AddTicks(7763),
                             Name = "Topic 3",
                             Visible = true
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 993, DateTimeKind.Local).AddTicks(4769),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 775, DateTimeKind.Local).AddTicks(7775),
                             Name = "Topic 4",
                             Visible = true
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 993, DateTimeKind.Local).AddTicks(4780),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 775, DateTimeKind.Local).AddTicks(7785),
                             Name = "Topic 5",
                             Visible = true
                         },
                         new
                         {
                             Id = 6,
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 993, DateTimeKind.Local).AddTicks(4798),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 775, DateTimeKind.Local).AddTicks(7804),
                             Name = "Topic 6",
                             Visible = true
                         },
                         new
                         {
                             Id = 7,
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 993, DateTimeKind.Local).AddTicks(4808),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 775, DateTimeKind.Local).AddTicks(7813),
                             Name = "Topic 7",
                             Visible = true
                         },
                         new
                         {
                             Id = 8,
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 993, DateTimeKind.Local).AddTicks(4818),
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 775, DateTimeKind.Local).AddTicks(7822),
                             Name = "Topic 8",
                             Visible = true
                         });
@@ -508,10 +509,14 @@ namespace EFDataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("Name")
-                        .HasColumnType("int");
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Name")
+                        .IsUnique();
 
                     b.ToTable("UseCases");
                 });
@@ -524,6 +529,7 @@ namespace EFDataAccess.Migrations
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Data")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("Date")
@@ -532,7 +538,7 @@ namespace EFDataAccess.Migrations
                     b.Property<int>("UseCaseId")
                         .HasColumnType("int");
 
-                    b.Property<int>("UserId")
+                    b.Property<int?>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -592,80 +598,20 @@ namespace EFDataAccess.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(666),
-                            Email = "pera@gmail.com",
-                            FirstName = "Pera",
-                            LastName = "Peric",
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 781, DateTimeKind.Local).AddTicks(6696),
+                            Email = "admin@gmail.com",
+                            FirstName = "Admin",
+                            LastName = "Admin",
                             Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
                             Visible = true
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(929),
-                            Email = "marko@gmail.com",
-                            FirstName = "Marko",
-                            LastName = "Markovic",
-                            Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 3,
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(952),
-                            Email = "petar@gmail.com",
-                            FirstName = "Petar",
-                            LastName = "Petrovic",
-                            Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 4,
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(1043),
-                            Email = "ivan@gmail.com",
-                            FirstName = "Ivan",
-                            LastName = "Ivanovic",
-                            Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 5,
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(1058),
-                            Email = "nikola@gmail.com",
-                            FirstName = "Nikola",
-                            LastName = "Nikolic",
-                            Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 6,
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(1077),
-                            Email = "marija@gmail.com",
-                            FirstName = "Marija",
-                            LastName = "Marjanovic",
-                            Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 7,
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(1090),
-                            Email = "milinko@gmail.com",
-                            FirstName = "Milinko",
-                            LastName = "Milinkovic",
-                            Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
-                            Visible = true
-                        },
-                        new
-                        {
-                            Id = 8,
-                            CreatedAt = new DateTime(2020, 6, 28, 16, 12, 24, 997, DateTimeKind.Local).AddTicks(1103),
-                            Email = "zdravko@gmail.com",
-                            FirstName = "Zdravko",
-                            LastName = "Zdravkovic",
+                            CreatedAt = new DateTime(2020, 6, 30, 17, 32, 20, 781, DateTimeKind.Local).AddTicks(7222),
+                            Email = "User@gmail.com",
+                            FirstName = "User",
+                            LastName = "User",
                             Password = "7guOFkbnL2s5eA0xSepLNiQdTQ+Rj8Oe0t6HR2KpKlw=",
                             Visible = true
                         });
@@ -678,6 +624,21 @@ namespace EFDataAccess.Migrations
 
                     b.Property<int>("UserId")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("DeletedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Id")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("ModifiedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("Visible")
+                        .HasColumnType("bit");
 
                     b.HasKey("UseCaseId", "UserId");
 
@@ -736,14 +697,12 @@ namespace EFDataAccess.Migrations
                     b.HasOne("Domain.UseCase", "UseCase")
                         .WithMany("UseCaseLogs")
                         .HasForeignKey("UseCaseId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Domain.User", "User")
                         .WithMany("UseCaseLogs")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .HasForeignKey("UserId");
                 });
 
             modelBuilder.Entity("Domain.UserUseCase", b =>
@@ -751,7 +710,7 @@ namespace EFDataAccess.Migrations
                     b.HasOne("Domain.UseCase", "UseCase")
                         .WithMany("UserUseCases")
                         .HasForeignKey("UseCaseId")
-                        .OnDelete(DeleteBehavior.Cascade)
+                        .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
 
                     b.HasOne("Domain.User", "User")
