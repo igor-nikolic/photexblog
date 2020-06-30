@@ -71,6 +71,7 @@ namespace Implementation.Commands.UserCommands
             new Domain.UserUseCase{ UserId = user.Id,UseCaseId =19 },
             new Domain.UserUseCase{ UserId = user.Id,UseCaseId =20 },
             new Domain.UserUseCase{ UserId = user.Id,UseCaseId =21 },
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =22 },
             new Domain.UserUseCase{ UserId = user.Id,UseCaseId =23 },
             new Domain.UserUseCase{ UserId = user.Id,UseCaseId =24 },
             new Domain.UserUseCase{ UserId = user.Id,UseCaseId =25 }
