@@ -4,6 +4,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Application.Commands.Rating;
 using Application.DTO;
+using Application.Queries.Rating;
+using Application.SearchDto;
 using Application.UseCase;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -25,18 +27,20 @@ namespace Api.Controllers
             _executor = executor;
         }
 
+        [AllowAnonymous]
         // GET: api/<RatingsController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get([FromQuery] RatingSearch search,[FromServices] IGetRatingsQuery query)
         {
-            return new string[] { "value1", "value2" };
+            return Ok(_executor.ExecuteQuery(query, search));
         }
 
+        [AllowAnonymous]
         // GET api/<RatingsController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IActionResult Get(int id,[FromServices] IGetOneRatingQuery query)
         {
-            return "value";
+            return Ok(_executor.ExecuteQuery(query,id));
         }
 
         // POST api/<RatingsController>

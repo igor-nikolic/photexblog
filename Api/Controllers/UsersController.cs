@@ -6,6 +6,8 @@ using Api.Core;
 using Application.Commands;
 using Application.Commands.User;
 using Application.DTO;
+using Application.Queries.User;
+using Application.SearchDto;
 using Application.UseCase;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -29,18 +31,20 @@ namespace Api.Controllers
             _manager = manager;
         }
 
+        [AllowAnonymous]
         // GET: api/<UsersController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IActionResult Get([FromQuery] UserSearch search,[FromServices] IGetUsersQuery query)
         {
-            return new string[] { "value1", "value2" };
+            return Ok(_executor.ExecuteQuery(query,search));
         }
-
+        
+        [AllowAnonymous]
         // GET api/<UsersController>/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public IActionResult Get(int id,[FromServices] IGetOneUserQuery query)
         {
-            return "value";
+            return Ok(_executor.ExecuteQuery(query, id));
         }
 
         [AllowAnonymous]

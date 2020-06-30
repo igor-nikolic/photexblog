@@ -14,8 +14,10 @@ using Application.DTO;
 using Application.Email;
 using Application.Queries.Comment;
 using Application.Queries.Post;
+using Application.Queries.Rating;
 using Application.Queries.Topic;
 using Application.Queries.UseCaseLog;
+using Application.Queries.User;
 using Application.UseCase;
 using EFDataAccess;
 using Implementation.Commands.CommentCommands;
@@ -27,8 +29,10 @@ using Implementation.Email;
 using Implementation.Loggers;
 using Implementation.Queries.Comment;
 using Implementation.Queries.Post;
+using Implementation.Queries.Rating;
 using Implementation.Queries.Topic;
 using Implementation.Queries.UseCaseLog;
+using Implementation.Queries.User;
 using Implementation.Validators.CommentValidators;
 using Implementation.Validators.PostValidators;
 using Implementation.Validators.RatingValidators;
@@ -72,12 +76,13 @@ namespace Api
             services.AddTransient<IGetOneTopicQuery, EfGetOneTopicQuery>();
             services.AddTransient<ICreateTopicCommand, EFCreateTopicCommand>();
             services.AddTransient<IUpdateTopicCommand, EfUpdateTopicCommand>();
-            services.AddTransient<IDeleteTopicCommand, EfSoftDeleteTopicCommand>();        
-            
-            
-            
-            
+            services.AddTransient<IDeleteTopicCommand, EfSoftDeleteTopicCommand>();
 
+
+
+
+            services.AddTransient<IGetUsersQuery, EfGetUsersQuery>();
+            services.AddTransient<IGetOneUserQuery, EfGetOneUserQuery>();
             services.AddTransient<ICreateUserCommand, EfCreateUserCommand>();
             services.AddTransient<IUpdateUserCommand, EfUpdateUserCommand>();
             services.AddTransient<IDeleteUserCommand, EfSoftDeleteUserCommand>();
@@ -96,6 +101,8 @@ namespace Api
             services.AddTransient<IDeleteCommentCommand, EfSoftDeleteCommentCommand>();
             services.AddTransient<IUpdateCommentCommand, EfUpdateCommentCommand>();
 
+            services.AddTransient<IGetRatingsQuery, EfGetRatingsQuery>();
+            services.AddTransient<IGetOneRatingQuery, EfGetOneRatingQuery>();
             services.AddTransient<ICreateRatingCommand, EfCreateRatingCommand>();
             services.AddTransient<IUpdateRatingCommand, EfUpdateRatingCommand>();
 
