@@ -9,6 +9,6 @@ namespace Api.Core
 
         public string Identity => "Guest";
 
-        public IEnumerable<int> AllowedUseCases => new List<int> { 1,16,18,19,20,21,22,23,24,25 };
+        public IEnumerable<int> AllowedUseCases => new List<int> { 1,16,17,18,19,20,21,22,23,24,25 };
     }
 }

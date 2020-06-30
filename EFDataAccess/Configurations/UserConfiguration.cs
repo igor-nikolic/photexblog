@@ -38,8 +38,6 @@ namespace EFDataAccess.Configurations
                 .HasForeignKey(uc => uc.UserId)
                 .OnDelete(DeleteBehavior.Restrict);
 
-
-
         }
     }
 }

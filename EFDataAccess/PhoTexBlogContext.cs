@@ -402,7 +402,7 @@ namespace EFDataAccess
 
 
             var fakeUsersUseCase = new List<UserUseCase>();
-            for (int i = 1; i <= 29; i++)
+            for (int i = 1; i <= 31; i++)
             {
                 fakeUsersUseCase.Add(new UserUseCase { 
                     Id=i,
@@ -414,25 +414,26 @@ namespace EFDataAccess
             }
             var regularUserUseCases = new List<UserUseCase> 
             {
-                new UserUseCase{ Id = 30,UserId=2,UseCaseId=2,Visible=true,CreatedAt=DateTime.Now},
-                new UserUseCase{ Id = 31,UserId=2,UseCaseId=3,Visible=true,CreatedAt=DateTime.Now},
-                new UserUseCase{ Id = 32,UserId=2,UseCaseId=7,Visible=true,CreatedAt=DateTime.Now},
-                new UserUseCase{ Id = 33,UserId=2,UseCaseId=8,Visible=true,CreatedAt=DateTime.Now},
-                new UserUseCase{ Id = 34,UserId=2,UseCaseId=9,Visible=true,CreatedAt=DateTime.Now},
-                new UserUseCase{ Id = 35,UserId=2,UseCaseId=10,Visible=true,CreatedAt=DateTime.Now},
-                new UserUseCase{ Id = 36,UserId=2,UseCaseId=11,Visible=true,CreatedAt=DateTime.Now},
-                new UserUseCase{ Id = 37,UserId=2,UseCaseId=12,Visible=true,CreatedAt=DateTime.Now},
-                new UserUseCase{ Id = 38,UserId=2,UseCaseId=13,Visible=true,CreatedAt=DateTime.Now},
-                new UserUseCase{ Id = 39,UserId=2,UseCaseId=14,Visible=true,CreatedAt=DateTime.Now},
-                new UserUseCase{ Id = 40,UserId=2,UseCaseId=16,Visible=true,CreatedAt=DateTime.Now},
-                new UserUseCase{ Id = 41,UserId=2,UseCaseId=17,Visible=true,CreatedAt=DateTime.Now},
-                new UserUseCase{ Id = 42,UserId=2,UseCaseId=18,Visible=true,CreatedAt=DateTime.Now},
-                new UserUseCase{ Id = 43,UserId=2,UseCaseId=19,Visible=true,CreatedAt=DateTime.Now},
-                new UserUseCase{ Id = 44,UserId=2,UseCaseId=20,Visible=true,CreatedAt=DateTime.Now},
-                new UserUseCase{ Id = 45,UserId=2,UseCaseId=21,Visible=true,CreatedAt=DateTime.Now},
-                new UserUseCase{ Id = 46,UserId=2,UseCaseId=23,Visible=true,CreatedAt=DateTime.Now},
-                new UserUseCase{ Id = 47,UserId=2,UseCaseId=24,Visible=true,CreatedAt=DateTime.Now},
-                new UserUseCase{ Id = 48,UserId=2,UseCaseId=25,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 32,UserId=2,UseCaseId=2,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 33,UserId=2,UseCaseId=3,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 34,UserId=2,UseCaseId=7,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 35,UserId=2,UseCaseId=8,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 36,UserId=2,UseCaseId=9,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 37,UserId=2,UseCaseId=10,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 38,UserId=2,UseCaseId=11,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 39,UserId=2,UseCaseId=12,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 40,UserId=2,UseCaseId=13,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 41,UserId=2,UseCaseId=14,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 42,UserId=2,UseCaseId=16,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 43,UserId=2,UseCaseId=17,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 44,UserId=2,UseCaseId=18,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 45,UserId=2,UseCaseId=19,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 46,UserId=2,UseCaseId=20,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 47,UserId=2,UseCaseId=21,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 48,UserId=2,UseCaseId=23,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 49,UserId=2,UseCaseId=24,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 50,UserId=2,UseCaseId=25,Visible=true,CreatedAt=DateTime.Now},
+                new UserUseCase{ Id = 51,UserId=2,UseCaseId=1,Visible=true,CreatedAt=DateTime.Now},
             };
             fakeUsersUseCase.AddRange(regularUserUseCases);
 
@@ -447,7 +448,7 @@ namespace EFDataAccess
             modelBuilder.ApplyConfiguration(new UseCaseLogConfiguration());
             
 
-            modelBuilder.Entity<UserUseCase>().HasKey(x => new {x.UseCaseId,x.UserId });
+            modelBuilder.Entity<UserUseCase>().HasIndex(x => new {x.UseCaseId,x.UserId }).IsUnique();
             modelBuilder.Entity<Rating>().HasIndex(r => new { r.UserId, r.PostId }).IsUnique();
 
             modelBuilder.Entity<Topic>().HasQueryFilter(t => t.Visible);

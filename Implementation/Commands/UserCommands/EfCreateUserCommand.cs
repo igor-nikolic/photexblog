@@ -7,6 +7,7 @@ using FluentValidation;
 using Implementation.Validators.UserValidators;
 using Microsoft.AspNetCore.Cryptography.KeyDerivation;
 using System;
+using System.Collections.Generic;
 
 namespace Implementation.Commands.UserCommands
 {
@@ -61,6 +62,34 @@ namespace Implementation.Commands.UserCommands
             //user.UserUseCases = 
             _context.Users.Add(user);
             _context.SaveChanges();
+
+            var userusecase = new List<Domain.UserUseCase> 
+            {
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =1 },
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =2 },
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =3 },
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =7 },
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =8 },
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =9 },
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =10 },
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =11 },
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =12 },
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =13 },
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =14 },
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =16 },
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =17 },
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =18 },
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =19 },
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =20 },
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =21 },
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =23 },
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =24 },
+            new Domain.UserUseCase{ UserId = user.Id,UseCaseId =25 }
+            };
+            _context.UserUseCases.AddRange(userusecase);
+            _context.SaveChanges();
+
+
             _sender.Send(new SendEmailDto
             {
                 Content = "You have been registered!",

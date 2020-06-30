@@ -5,10 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20200620104728_initial.cs" />
+    <Compile Remove="Migrations\20200620104728_initial.Designer.cs" />
     <Compile Remove="Migrations\20200620125237_fixed relations.cs" />
     <Compile Remove="Migrations\20200620125237_fixed relations.Designer.cs" />
     <Compile Remove="Migrations\20200620125603_fixed db.cs" />
     <Compile Remove="Migrations\20200620125603_fixed db.Designer.cs" />
+    <Compile Remove="Migrations\20200620150721_updated db.cs" />
+    <Compile Remove="Migrations\20200620150721_updated db.Designer.cs" />
     <Compile Remove="Migrations\20200628115833_added seedings.cs" />
     <Compile Remove="Migrations\20200628115833_added seedings.Designer.cs" />
     <Compile Remove="Migrations\20200628120140_added seedings-topic.cs" />
@@ -69,6 +73,22 @@
     <Compile Remove="Migrations\20200630122737_useCases.Designer.cs" />
     <Compile Remove="Migrations\20200630123045_useCases.cs" />
     <Compile Remove="Migrations\20200630123045_useCases.Designer.cs" />
+    <Compile Remove="Migrations\20200630153055_added users,topics.cs" />
+    <Compile Remove="Migrations\20200630153055_added users,topics.Designer.cs" />
+    <Compile Remove="Migrations\20200630153222_added posts.cs" />
+    <Compile Remove="Migrations\20200630153222_added posts.Designer.cs" />
+    <Compile Remove="Migrations\20200630153301_added comments.cs" />
+    <Compile Remove="Migrations\20200630153301_added comments.Designer.cs" />
+    <Compile Remove="Migrations\20200630153338_added ratings.cs" />
+    <Compile Remove="Migrations\20200630153338_added ratings.Designer.cs" />
+    <Compile Remove="Migrations\20200630153414_added usecases.cs" />
+    <Compile Remove="Migrations\20200630153414_added usecases.Designer.cs" />
+    <Compile Remove="Migrations\20200630153451_added userusecases.cs" />
+    <Compile Remove="Migrations\20200630153451_added userusecases.Designer.cs" />
+    <Compile Remove="Migrations\20200630192353_fixed userusecase.cs" />
+    <Compile Remove="Migrations\20200630192353_fixed userusecase.Designer.cs" />
+    <Compile Remove="Migrations\20200630193113_initial.cs" />
+    <Compile Remove="Migrations\20200630193113_initial.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>
