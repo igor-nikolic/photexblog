@@ -70,15 +70,7 @@ namespace Api.Core
         }
         private string hashPassword(string stringToHash) 
         {
-            //byte[] salt = new byte[128 / 8];
-            //Console.WriteLine($"Salt: {Convert.ToBase64String(salt)}");
-            //using (var rng = RandomNumberGenerator.Create())
-            //{
-            //    Console.WriteLine($"RNG {rng}");
-            //    rng.GetBytes(salt);
-            //}
             byte[] salt = Convert.FromBase64String("olK4MOHPZ8IgkmfD17+oyg==");
-            Console.WriteLine($"Salt: {Convert.ToBase64String(salt)}");
 
             // derive a 256-bit subkey (use HMACSHA1 with 10,000 iterations)
             string hashed = Convert.ToBase64String(KeyDerivation.Pbkdf2(
@@ -88,7 +80,6 @@ namespace Api.Core
                 iterationCount: 10000,
                 numBytesRequested: 256 / 8));
 
-            Console.WriteLine($"Hashed when logging in: {hashed}");
             return hashed;
         }
     }
