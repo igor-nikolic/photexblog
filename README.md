@@ -1,2 +1,2 @@
 # photexblog
-School project
+Documentation is on wiki page
